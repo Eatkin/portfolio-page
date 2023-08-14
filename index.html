@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Atkin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hello, I'm Edward Atkin. I've been working with code since I was around 11 years old when I decided I
+                wanted
+                to make my own games.</p>
+            <p>I have experience in web development, scientific computing and game development, but more recently I am
+                looking to specialise in the field of data science.</p>
+            <p>I have learnt Data Science through Le Wagon's Data Science Bootcamp, which is one of the best rated
+                bootcamps
+                in the world.</p>
+        </section>
+        <section id="skills">
+            <h2>My Technical Skills</h2>
+            <h3>Data</h3>
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>StatsModels</li>
+                <li>SciKitLearn</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>Matplotlib</li>
+            </ul>
+            <h3>Games</h3>
+            <ul>
+                <li>Gamemaker Studio 2</li>
+                <li>Socket IO</li>
+            </ul>
+            <h3>Web</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive design</li>
+            </ul>
+            <h3>Developer Skills</h3>
+            <ul>
+                <li>Git/Github</li>
+                <li>Visual Studio Code</li>
+                <li>Bash/Z Shell</li>
+                <li>Vim</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Data</h2>
+            <!-- Notes for me: the project image and overlay need css rewriting for scaling etc -->
+            <!-- Open project content as a scrollable container over the main content instead of the accordion thing I have at the moment-->
+            <div class="project">
+                <div class="project-image">
+                    <img src="assets/images/pexels-tom-fisk-13066405.jpg" alt="Horse racing">
+                    <div class="project-overlay">
+                        <h3>Horse Racing Predictor</h3>
+                        <p>Project objective: Train a machine learning model to predict the outcome of horse races.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-details-overlay">
+                    <div class="project-content">
+                        <h3>Horse Racing Predictor</h3>
+                        <h4>Motivation</h4>
+                        <h5>Inspiration</h5>
+                        <p>My first step into the world of gambling was through matched betting - a no-risk methodology
+                            to
+                            using
+                            Bookmaker
+                            offers to guarantee profits.</p>
+                        <p>Ever since I began using matched betting to make money, I have become interested in betting
+                            systems and technically-driven approaches to gambling.</p>
+                        <p>As is the case for almost all gamblers, my success was limited, and due to a general aversion
+                            to
+                            losing
+                            money, I
+                            eventually shelved the idea.</p>
+                        <p>It wasn't until starting the Le Wagon Data Science bootcamp that some people mentioned their
+                            interest
+                            in
+                            sports
+                            betting. My
+                            interest was piqued once again.</p>
+                        <h5>Advantages of Machine Learning Methods</h5>
+                        <p>Gambling is addictive. This is a very well known result, and it's very easy to get
+                            emotionally
+                            involved
+                            with
+                            it.
+                            Losing can result in 'revenge betting'. It
+                            can also result in over-analysing your losses to try find reasons where none exist, or
+                            thoughts such as 'I
+                            <i>almost</i>
+                            won!'.
+                        </p>
+                        <p>A robo-betting strategy provided by a machine learning model removes a lot of these factors.
+                            The
+                            bettor
+                            does not
+                            have to review racecards, they do not have to think they made a bad decision and they do not
+                            need to
+                            analyse
+                            their wins and losses.</p>
+                        <p>Although emotions are not completely removed, the urges to overanalyse and seek revenge after
+                            a
+                            loss
+                            is
+                            no longer
+                            a factor.</p>
+                        <h4>Project Overview</h4>
+                        <h5>Objectives</h5>
+                        <p>Create a model that is able to predict the outcome of horse races.</p>
+                        <h5>Data Collection</h5>
+                        <p>Horse racing data is difficult to get ahold of, with only a few patchy datasets on Kaggle
+                            available.
+                        </p>
+                        <p>Searching Github I came across <a href="https://github.com/joenano/rpscrape"
+                                target="_blank">RPScrape</a>, a
+                            utility for scraping results from Racing Post. From this I gathered around 1.5 million
+                            datapoints
+                            for
+                            use in
+                            model training.</p>
+                        <p>I have subsequently built automated systems which will scrape results daily, as up-to-date
+                            data
+                            is
+                            crucial for
+                            the accurate functioning of the models.</p>
+                        <h5>Data Processing</h5>
+                        <p>Horse racing data in isolation is almost useless, with no strong correlations with anything.
+                            To
+                            begin
+                            making
+                            sense of all the data, it requires history and context.</p>
+                        <p>I engineered various features using Pandas built-in aggregation utilities. Features include
+                            aggregations of horse's performance over its lifetime, alongside comparisons with its
+                            competitors
+                            within a race.</p>
+                        <h5>Model Training</h5>
+                        <p>As horse racing is notoriously difficult to predict with any consistency, machine learning
+                            models
+                            suffer
+                            likewise, with overfitting being the biggest problem.</p>
+                        <p>The benchmark for a model is around 13% precision. I arrived at this figure by running a
+                            simulation which
+                            randomly
+                            picked one
+                            horse from every race, resulting in a 13% success rate.</p>
+                        <p>I have trained two separate models, a deep neural network and a random forest classifier,
+                            which
+                            are
+                            both
+                            able to
+                            capture complex relationships within data.</p>
+                        <p>By carefully balancing parameters, the neural network to predict winners with around 25%
+                            success,
+                            which
+                            is a mild
+                            success when compared to the benchmark.</p>
+                        <p>My second model, using ensemble machine learning algorithms, allowed my model to hit around
+                            60%
+                            precision
+                            on
+                            predicting winners, but at the cost of providing a winning candidate only once a week on
+                            average.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <h5>Does It Make Money? The Short Answer</h5>
+                        <p>Yes. I have had success with my strategy. The nature of horse racing and its inherent
+                            unpredictability
+                            means that
+                            I may suffer long drawdowns, however, the general trend is upwards and most days are winning
+                            days.
+                        </p>
+                        <img src="assets/images/candlesticks.png" alt="Candlestick Chart showing betting progress" \>
+                        <h5>Does It Make Money? The Long Answer</h5>
+                        <p>We must be careful before we say a betting strategy is successful. Whilst trialling betting
+                            strategies
+                            over my
+                            dataset, I found that merely randomly picking a horse from each race can occassionally
+                            result in
+                            enormous
+                            profits (although most of the time it results in a loss).</p>
+                        <p>There is no way to tell if the betting strategy is going to be successful forever, it is
+                            merely
+                            that
+                            your
+                            confidence increases the longer it is profitable.</p>
+                        <h5>Personal Growth and Lessons Learnt</h5>
+                        <p>This project was a huge exercise in taking data with almost no meaningful features and
+                            turning it
+                            into
+                            something
+                            useful.</p>
+                        <p>Upon completing my first model, which took me around a month, I found the results to be
+                            disappointing. At
+                            this
+                            point, it would have been easy to give up and move on, but I instead tried to further my
+                            domain
+                            knowledge in
+                            horse racing, which lead to reading about the <a
+                                href="https://en.wikipedia.org/wiki/Beyer_Speed_Figure" , target="_blank">Bayer Speed
+                                Figures</a> used in Hong Kong races. Inspired by this I
+                            created my own speed ratings to benchmark horses against, and this proved to be a crucial
+                            piece
+                            of
+                            the
+                            puzzle.
+                        </p>
+                        <h5>The Future</h5>
+                        <h6>Automation</h6>
+                        <p>This project is already automated to the point where a Bash script will gather results,
+                            racecards, perform data processing, modelling and finally email the relevant
+                            results to me.</p>
+                        <p>This may be further automated with use of the cron utility and a system such as a Raspberry
+                            Pi to host the service.</p>
+                        <p>While bets are currently manually placed, Betfair Exchange has an API which can be utilised
+                            to automate betting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="assets/images/codewars.png" alt="Codewars problems" />
+                    <div class="project-overlay">
+                        <h3>Codewars Web Scraper and Data Visualisation</h3>
+                        <p>Project Objective: Build a Web Scraper for Codewars Problems and Create a Data
+                            Visualization
+                            Notebook</p>
+                    </div>
+                </div>
+                <div class="project-details-overlay">
+                    <div class="project-content">
+                        <h3>Codewars Web Scraper and Data Visualisation</h3>
+                        <h4>Project Motivation</h4>
+                        <h5>Inspiration</h5>
+                        <p>I have been using coding problems to further my technical capabilities since I started
+                            learning
+                            Python. I also
+                            use it to explore new languages and paradigms.</p>
+                        <p>My platform of choice is <a href="https://www.codewars.com/about"
+                                target="_blank">Codewars</a>,
+                            and as I
+                            racked up solutions I wanted a way to be able to extract them all.</p>
+                        <p>As I was learning new concepts with Le Wagon, I decided to use this as an opportunity to
+                            build a
+                            web scraper and
+                            data visualisation project with my newly learnt skills.</p>
+                        <h4>Project Overview</h4>
+                        <h5>Project Objectives</h5>
+                        <p>The primary goal of this project is to build a customised web scraper for Codewars problems
+                            and
+                            create an
+                            interactive data visualisation notebook to accompany the problems.</p>
+                        <h5>Data Collection</h5>
+                        <p>Initially I built a static webscraper, requiring me to preload the page with the number of
+                            problems I wanted to
+                            scrape and save it locally. Codewars loads solutions dynamically, so as I solved more
+                            problems,
+                            this became more
+                            cumbersome.</p>
+                        <p>I later updated the scraper to use Selenium to login to Codewars using a headless browser and
+                            simulate scrolling
+                            to the bottom of the page. Beautiful Soup then parses all the problems, which are saved
+                            locally and organised into folders based on the problem's programming language.</p>
+                        <h5>Data Visualisation</h5>
+                        <p>Instead of just leaving these scraped problems to sit archived on my hard disk, I decided to
+                            bring it to life by
+                            creating a Jupyter Notebook to visualise the data and explore interesting features.</p>
+                        <p>By employing libraries such as Matplotlib and Seaborn, I'm able to visualise my problem
+                            solving
+                            behaviour over
+                            time.</p>
+                        <p>For example, I can see how many problems I solved each day, how many problems I solved in
+                            each
+                            language, and how
+                            many problems I solved in each difficulty.</p>
+                        <p>I also use the Codewars API to collect additional information about problems, which allows me
+                            to
+                            uncover novel
+                            insights such as the 'rarest kata', the Codewars problem I've solved that has the least
+                            solved,
+                            or the 'most
+                            difficult kata', the Codewars problem that has the lowest rate of completion.</p>
+                        <h5>Impact and Future Steps</h5>
+                        <p>This project forms the foundation for future explorations in coding challenges and data
+                            analysis.
+                        </p>
+                        <p>The Jupyter Notebook can handle problems dynamically, meaning it is self-updating as I solve
+                            more
+                            problems.</p>
+                        <h4>Conclusion</h4>
+                        <p>My Codewars Web Scraper and Data Visualisation project shows my passion for coding, data
+                            exploration, and
+                            problem-solving.</p>
+                        <p>The Jupyter Notebook is a great way to visualise the progress I've made and I look forward to
+                            continuing to use
+                            it as I
+                            solve more problems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Internet Recommender Engine</h3>
+                <p>Description of Project 3.</p>
+            </div>
+            <h2>Games</h2>
+            <div class="project">
+                <h3>Other Minds</h3>
+                <p>Project overview: a 2d platformer where players can take control of any other entity in the game.</p>
+            </div>
+            <div class="project">
+                <h3>Date &amp; Game Demo Reel</h3>
+                <p>Project overview: a dating app that allows people to connect and play games together.</p>
+            </div>
+            <div class="project">
+                <h3>A Relaxing Typing Game</h3>
+                <p>Project overview: a pure typing game where players can type out public domain stories and poetry in a
+                    relaxed atmosphere.</p>
+            </div>
+            <h2>Web</h2>
+            <div class="project">
+                <h3>Personal Homepage</h3>
+                <p>This is my personal homepage which I use to host everything I have made. It uses a no-Javascript
+                    approach
+                    to maximise compatibility, which required some very creative use of CSS to create features such as
+                    filtering by tags.</p>
+                <p>I upload dynamic content such as a blog and webcomic, and have built automation tools using Python to
+                    construct webpages dynamically.</p>
+                <p>As the site is hosted on Neocities, I make use of the Neocities API and file change tracking in order
+                    to
+                    automate the upload of content.</p>
+            </div>
+            <div class="project">
+                <h3>Tombstone Tapes</h3>
+                <p>Description of Website 2.</p>
+            </div>
+            <div class="project">
+                <h3>DOScord</h3>
+                <p>Description of Website 3.</p>
+            </div>
+            <h2>Blogs</h2>
+            <div class="project">
+                <h3>Coding Heaven</h3>
+                <p>Coding Heaven is an entertaining blog features personal coding stories and fun, creative approaches
+                    to
+                    computer programming.</p>
+                <p>Examples include "Off-By-One Horrors", the story of how it took me three weeks to solve an off by one
+                    error, along with "Hello World but it Becomes Increaasingly Disturbing", a look back at the classic
+                    Hello World program and how we can have fun by completely over-engineering it.</p>
+            </div>
+            <div class="project">
+                <h3>Edward Atkin's Blog</h3>
+                <p>This is my personal blog I use for life annecdotes, memories and personal reflection.</p>
+                <p>Examples include "In Which I Break Free From My Sister's Banana Boycott", the story of how I didn't
+                    eat
+                    bananas for 25 years because my sister didn't like them, and "On The Dustry Drawers of Abandoned
+                    Hobbies", a reflection on hobbies I felt very enthusiastic for, only for them to be left to gather
+                    dust.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Weird Indie Shit</h3>
+                <p>Being an indie game developer has given me experience in the sheer difficulty of getting noticed, and
+                    as
+                    programming video games becomes more accessible day by day, more and more people are uploading their
+                    games to share.</p>
+                <p>After the observation that several hundred games are uploaded to Itch IO per day, most of which would
+                    never be seen or played, I decided to embark on some indie game archaeology to discuss a few games
+                    that
+                    nobody has ever heard of.</p>
+            </div>
+            <h2>Miscellaneous</h2>
+            <h3>Udemy Certificats</h3>
+            <p>I enjoy learning and continuous personal development, and find Udemy to be a valuable resource for
+                educational content. Here you can find a list of courses which I have completled.</p>
+            <div class="project">
+                <h3>The Git and Github Bootcamp</h3>
+                <p>A course covering all aspects of git, from simple commits to full git workflows.</p>
+            </div>
+            <div class="project">
+                <h3>Design a CPU</h3>
+                <p>A course covering the design of a CPU from scratch, from primitive circuitry to full assembler.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <p>You can reach me at example@email.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

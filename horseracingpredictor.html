@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Atkin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Horse Racing Predictor</h1>
+    <h2>Motivation</h2>
+    <h3>Inspiration</h3>
+    <p>My first step into the world of gambling was through matched betting - a no-risk methodology to using Bookmaker
+        offers to guarantee profits.</p>
+    <p>Ever since I began using matched betting to make money, I have become interested in betting
+        systems and technically-driven approaches to gambling.</p>
+    <p>As is the case for almost all gamblers, my success was limited, and due to a general aversion to losing money I
+        eventually shelved the idea.</p>
+    <p>It wasn't until starting the Le Wagon Data Science bootcamp that some people mentioned their interest in sports
+        betting. My
+        interest was piqued once again.</p>
+
+    <h3>Advantages of Machine Learning Methods</h3>
+    <p>Gambling is addictive. This is a very well known result. It's very easy to get emotionally involved with it.
+        Losing can result in 'revenge betting'. It
+        can also result in over-analysing your losses to try find reasons, or thoughts such as 'I <i>almost</i> won!'.
+    </p>
+    <p>A robo-betting strategy provided by a machine learning model removes a lot of these factors. The bettor does not
+        have to review racecards, they do not have to think they made a bad decision and they do not need to analyse
+        their wins and losses.</p>
+    <p>Although emotions are not completely removed, the urges to overanalyse and seek revenge after a loss is no longer
+        a factor.</p>
+
+    <h2>Project Overview</h2>
+    <h3>Objectives</h3>
+    <p>Create a model that is able to predict the outcome of horse races.</p>
+
+    <h3>Data Collection</h3>
+    <p>Horse racing data is difficult to get ahold of, with only a few patchy datasets on Kaggle available.</p>
+    <p>Searching Github I came across <a href="https://github.com/joenano/rpscrape" target="_blank">RPScrape</a>, a
+        utility for scraping results from Racing Post. From this I gathered around 1.5 million datapoints for use in
+        model training.</p>
+    <p>I have subsequently built automated systems which will scrape results daily, as up-to-date data is crucial for
+        the accurate functioning of the models.</p>
+
+    <h3>Data Processing</h3>
+    <p>Horse racing data in isolation is almost useless, with no strong correlations with anything. To begin making
+        sense of all the data, it requires history and context.</p>
+    <p>I engineered various features using Pandas built-in aggregation utilities. Features include aggregations of
+        horse's performance over its lifetime, alongside comparisons with its competitors within a race.</p>
+
+    <h3>Model Training</h3>
+    <p>As horse racing is notoriously difficult to predict with any consistency, machine learning models suffer
+        likewise, with overfitting being the biggest problem.</p>
+    <p>The benchmark is around 13% precision. I arrived at this figure by running a simulation which randomly picked one
+        horse from every race, resulting in a 13% success rate.</p>
+    <p>I have trained two separate models, a deep neural network and a random forest classifier, which are both able to
+        capture complex relationships within data.</p>
+    <p>By carefully balancing parameters, the neural network to predict winners with around 25% success, which is a mild
+        success when compared to the benchmark.</p>
+    <p>My second model, using ensemble machine learning algorithms, allowed my model to hit around 60% precision on
+        predicting winners, but at the cost of providing a winning candidate only once a week on average.</p>
+
+    <h2>Conclusion</h2>
+    <h3>Does It Make Money? The Short Answer</h3>
+    <p>Yes. I have had success with my strategy. The nature of horse racing and its inherent unpredictability means that
+        I may suffer long drawdowns, however, the general trend is upwards and most days are winning days.</p>
+
+    <img src="assets/images/candlesticks.png" alt="Candlestick Chart showing betting progress" \>
+
+    <h3>Does It Make Money? The Long Answer</h3>
+    <p>We must be careful before we say a betting strategy is successful. Whilst trialling betting strategies over my
+        dataset, I found that merely randomly picking a horse from each race can occassionally result in enormous
+        profits (although most of the time it results in a loss).</p>
+    <p>There is no way to tell if the betting strategy is going to be successful forever, it is merely that your
+        confidence increases the longer it is profitable.</p>
+
+
+    <h3>Personal Growth and Lessons Learnt</h3>
+    <p>This project was a huge exercise in taking data with almost no meaningful features and turning it into something
+        useful.</p>
+    <p>Upon completing my first model, which took me around a month, I found the results to be disappointing. At this
+        point, it would have been easy to give up and move on, but I instead tried to further my domain knowledge in
+        horse racing, which lead to reading about the <a href="https://en.wikipedia.org/wiki/Beyer_Speed_Figure" ,
+            target="_blank">Bayer Speed Figures</a> used in Hong Kong races. Inspired by this I
+        created my own speed ratings to benchmark horses against, and this proved to be a crucial piece of the puzzle.
+    </p>
+
+    <h3>The Future</h3>
+    <h4>Automation</h4>
+    <p>This project is already automated to the point where I simply press "Run All" in a Jupyter Notebook, which will
+        gather results, racecards, perform data processing, modelling and finally email the relevant results to me.</p>
+    <p>This may be further automated with use of the cron utility and a system such as a Raspberry Pi to host the
+        service.</p>
+    <p>While bets are currently manually placed, Betfair Exchange has an API which can be utilised to auto-bet.</p>
+</body>
+
+</html>
