@@ -66,7 +66,10 @@
         <section id="projects">
             <h2>Data</h2>
             <!-- Notes for me: the project image and overlay need css rewriting for scaling etc -->
-            <!-- Open project content as a scrollable container over the main content instead of the accordion thing I have at the moment-->
+            <!-- ul element in project content have no padding -->
+            <!-- for responsive design I need an x button to close things -->
+            <!-- anchor tags need a colour that isn't impossible to see -->
+            <!-- I am using figures and figcaption so include them in the css (possibly copied from mdn) -->
             <div class="project">
                 <div class="project-image">
                     <img src="assets/images/pexels-tom-fisk-13066405.jpg" alt="Horse racing">
@@ -283,6 +286,13 @@
                             simulate scrolling
                             to the bottom of the page. Beautiful Soup then parses all the problems, which are saved
                             locally and organised into folders based on the problem's programming language.</p>
+
+                        <figure>
+                            <img src="assets/images/codewarsScraper.png"
+                                alt="Codewars scraper running in command line" />
+                            <figcaption>The Codewars Scraper is a command line based Python program</figcaption>
+                        </figure>
+
                         <h5>Data Visualisation</h5>
                         <p>Instead of just leaving these scraped problems to sit archived on my hard disk, I decided to
                             bring it to life by
@@ -291,6 +301,14 @@
                             solving
                             behaviour over
                             time.</p>
+
+                        <figure>
+                            <img src="assets/images/codewarsDifficultyChart.png"
+                                alt="Chart showing distribution of difficulties for each programming language" />
+                            <figcaption>Chart showing distribution of difficulties for each programming language
+                            </figcaption>
+                        </figure>
+
                         <p>For example, I can see how many problems I solved each day, how many problems I solved in
                             each
                             language, and how
@@ -317,6 +335,28 @@
                             continuing to use
                             it as I
                             solve more problems.</p>
+
+                        <h6>Future Steps</h6>
+                        <p>The Codewars scraper does not include any error trapping for if the user enters incorrect
+                            login credentials or if the scraper is comes across an unexpected programming language, as
+                            detailed below.</p>
+                        <p>The Codewars scraper contains a dictionary matching programming languages to file extensions
+                            and comment syntax, this only contains the programming languages I have used on Codewars.
+                            This dictionary may be extended to contain details for all programming languages Codewars
+                            offers.</p>
+
+                        <h6>Project Links</h6>
+                        <ul>
+                            <li><a href="https://github.com/Eatkin/codewars-scraper" target="_blank">Codewars
+                                    Scraper
+                                    Github Repository</a></li>
+                            <li><a href="https://github.com/Eatkin/codewars-data-analysis" target="_blank">Codewars
+                                    Analysis and Data Visualisation Github Repository</a></li>
+                            <li><a href="https://eatkin.github.io/codewars-data-analysis/#/" target="_blank">Codewars
+                                    Analysis and Data Visualisation Slides</a></li>
+                            <li><a href="https://github.com/Eatkin/codewars-solutions" target="_blank">Codewars
+                                    Solutions Github Repository</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
