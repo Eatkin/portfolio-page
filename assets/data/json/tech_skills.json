@@ -1,0 +1,78 @@
+{
+    "Data": [
+        {
+            "name": "Python",
+            "description": "Versatile scripting language for various applications."
+        },
+        {
+            "name": "SQL",
+            "description": "Database query language for data manipulation."
+        },
+        {
+            "name": "StatsModels",
+            "description": "Statistical modeling and analysis library in Python."
+        },
+        {
+            "name": "SciKit-Learn",
+            "description": "Machine learning library for Python."
+        },
+        {
+            "name": "TensorFlow",
+            "description": "Open-source machine learning framework by Google."
+        },
+        {
+            "name": "Keras",
+            "description": "High-level neural networks API running on top of TensorFlow."
+        },
+        {
+            "name": "Matplotlib",
+            "description": "Python plotting library for creating visualizations."
+        }
+    ],
+    "Games": [
+        {
+            "name": "Gamemaker Studio 2",
+            "description": "Game development platform for 2D games."
+        },
+        {
+            "name": "Socket IO",
+            "description": "Real-time communication library for web applications."
+        }
+    ],
+    "Web": [
+        {
+            "name": "HTML5",
+            "description": "Markup language for structuring web content."
+        },
+        {
+            "name": "CSS3",
+            "description": "Stylesheet language for designing web layouts."
+        },
+        {
+            "name": "JavaScript",
+            "description": "Programming language for interactive web elements."
+        },
+        {
+            "name": "Responsive design",
+            "description": "Design approach for adapting to various devices."
+        }
+    ],
+    "Developer Skills": [
+        {
+            "name": "Git/Github",
+            "description": "Version control system for collaborative coding."
+        },
+        {
+            "name": "Visual Studio Code",
+            "description": "Code editor with powerful features and extensions."
+        },
+        {
+            "name": "Bash/Z Shell",
+            "description": "Command-line interface for scripting and automation."
+        },
+        {
+            "name": "Vim",
+            "description": "Text editor for efficient code editing."
+        }
+    ]
+}

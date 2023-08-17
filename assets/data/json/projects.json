@@ -1,0 +1,18 @@
+{
+    "Data": [
+        {
+            "name": "Horse Racing Predictor",
+            "html": "assets/data/html/horse.html"
+        },
+        {
+            "name": "Codewars Analysis",
+            "html": "assets/data/html/codewars.html"
+        }
+    ],
+    "Games": [
+        {
+            "name": "Other Minds",
+            "html": "assets/data/html/otherminds.html"
+        }
+    ]
+}

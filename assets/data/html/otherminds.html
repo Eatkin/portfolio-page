@@ -1,0 +1,104 @@
+<div class="project">
+    <div class="project-image">
+        <img src="assets/images/otherminds.png" alt="Other Minds title image">
+        <div class="project-overlay">
+            <div class="overlay-text-container">
+                <h3>Other Minds</h3>
+                <p>Project objective: a 2d platformer where players can take control of any other entity in
+                    the
+                    game.</p>
+            </div>
+        </div>
+    </div>
+    <div class="project-details-overlay">
+        <div class="project-content">
+            <h3>Other Minds</h3>
+            <h4>Motivation</h4>
+            <h5>Inspiration</h5>
+            <p>Other Minds was conceptually influenced by philosophy. Inparticular, why are we
+                ourselves? Why can't we know what it is to be
+                other people? This is a concept in philosophy known as
+                the problem of other minds - how do you know others experience consciousness?</p>
+            <p>Other Minds is a game that explores this concept. You play as the main character Ed, who is
+                accompanied by a floating green whisp called Sage who can possess other entities in the
+                game. The player can then control these entities, and use their abilities to solve puzzles
+                and progress through the game.</p>
+            <p>It was heavily influenced by the classic Gamemaker indie game <a
+                    href="http://autofish.net/clysm/art/video_games/seiklus/index.html" target="_blank">Seiklus.</a></p>
+
+            <h4>Project Overview</h4>
+            <h5>Modular Design</h5>
+            <p>Other Minds is a relatively large, open world 2d platformer. Modular, re-usable code helped
+                to streamline the development process and made the addition of new features simple.</p>
+            <p>Since every character is controllable, their abilities are determined by variables
+                dictating things such as speed, acceleration and jump height, alongside a list of boolean
+                variables to determine which abilities are and are not available. Every character runs on
+                the exact same script. Using a finite state machine, both the main character and various
+                other characters, such as a bird, run on the same code, which demonstrates how powerful this
+                concept is.</p>
+
+            <figure>
+                <img src="assets/images/otherMindsGif.gif" alt="A challenging scenario in Other Minds" />
+                <figcaption>A challenging scenario in Other Minds</figcaption>
+            </figure>
+
+            <h5>Character AI</h5>
+            <p>Every character in the game should move in the same way whilst they have 'free will' and
+                whilst the player is controlling them. To accomplish this, characters use simulated key
+                presses to create movement. The game world is supposed to be full of characters who are able
+                to exhibit behaviours, be it slimes who have fun jumping up and down, or a nervous character
+                who paces back and forth. The use of simulating movement as if the player were controlling
+                them allows this.</p>
+            <p>Using some situational awareness, this can allow for extremely complex emergent behaviour for
+                characters. Of note is the first boss fight of the game where the player faces antagonist Dr
+                Death. Upon defeating his machines, Dr Death himself runs into the boss arena to try and
+                attack you. He is able to determine which platforms he can reach and calculate which is best
+                for reaching his target, the player. The emergent behaviour based on a few simple rules
+                allows the AI to become very complex, and infact, I had to deliberately dumb down the
+                behaviour and create 'mistakes' because the boss fight became way too difficult.</p>
+
+            <figure>
+                <img src="assets/images/otherMindsDrDeath.png" alt="Dr Death boss fight in Other Minds" />
+                <figcaption>Dr Death boss fight in Other Minds - Dr Death is able to navigate platforms to
+                    pathfind to the player</figcaption>
+            </figure>
+
+            <h4>Conclusion</h4>
+            <h5>Personal Growth and Lessons Learnt</h5>
+            <p>Other Minds was my first large project after a long break from programming. Whilst this
+                project does have somewhat organised code, my coding ability improved meaning that in future
+                I could bring forward what I learnt. This is demonstrated in project such as <i><a
+                        href="https://eatkin.itch.io/ben-was-assimilated" target="_blank">
+                        Ben Was Assimilated
+                    </a></i>, which made the process of adding new enemies or items to the game a
+                case of adding one line of code, and the modularity of the code did the rest.</p>
+            <p>The game also required careful management of data, for which I made use of bitmasking and
+                data structures. Bitmasking is a powerful concept which I have used in almost every
+                project since.</p>
+            <p>This project also took place over the course of several years, and maintaining a project for
+                that long can be difficult in terms of motivation.</p>
+
+            <h5>The Future</h5>
+            <p>Other Minds has now been shelved and no more work will be done on it. I have often considered
+                making a sequel, or re-imagining, since my abilities have grown hugely since I first
+                embarked on making this game. I would be able to combine everything I have learnt over the
+                past few years to create a more immersive experience, with improved game mechanics and
+                storytelling.</p>
+            <p>The one large barrier is time - producing a project this large can take it's toll, especially
+                when you are working fulltime alongside.</p>
+
+            <h5>Project Links</h5>
+            <ul>
+                <li><a href="https://eatkin.itch.io/other-minds" target="_blank">Other Minds on Itch IO</a>
+                </li>
+                <li><a href="https://github.com/Eatkin/OtherMinds" target="_blank">Other Minds Github
+                        Repository</a></li>
+                <li><a href="https://www.youtube.com/watch?v=0AfXycXbqj8" target="_blank">Other Minds
+                        Trailer</a></li>
+                <li><a href="https://www.youtube.com/watch?v=IJQ1HT4kFHg" target="_blank">Other Minds
+                        Longplay</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>

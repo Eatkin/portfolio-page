@@ -35,48 +35,50 @@
             <h2>My Technical Skills</h2>
             <h3>Data</h3>
             <ul>
-                <li>Python</li>
-                <li>SQL</li>
-                <li>StatsModels</li>
-                <li>SciKitLearn</li>
-                <li>TensorFlow</li>
-                <li>Keras</li>
-                <li>Matplotlib</li>
+                <li data-tooltip="Versatile scripting language for various applications.">Python</li>
+                <li data-tooltip="Database query language for data manipulation.">SQL</li>
+                <li data-tooltip="Statistical modeling and analysis library in Python.">StatsModels</li>
+                <li data-tooltip="Machine learning library for Python.">SciKitLearn</li>
+                <li data-tooltip="Open-source machine learning framework by Google.">TensorFlow</li>
+                <li data-tooltip="High-level neural networks API running on top of TensorFlow.">Keras</li>
+                <li data-tooltip="Python plotting library for creating visualizations.">Matplotlib</li>
             </ul>
+
             <h3>Games</h3>
             <ul>
-                <li>Gamemaker Studio 2</li>
-                <li>Socket IO</li>
+                <li data-tooltip="Game development platform for 2D games.">Gamemaker Studio 2</li>
+                <li data-tooltip="Real-time communication library for web applications.">Socket IO</li>
             </ul>
+
             <h3>Web</h3>
             <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Responsive design</li>
+                <li data-tooltip="Markup language for structuring web content.">HTML5</li>
+                <li data-tooltip="Stylesheet language for designing web layouts.">CSS3</li>
+                <li data-tooltip="Programming language for interactive web elements.">JavaScript</li>
+                <li data-tooltip="Design approach for adapting to various devices.">Responsive design</li>
             </ul>
+
             <h3>Developer Skills</h3>
             <ul>
-                <li>Git/Github</li>
-                <li>Visual Studio Code</li>
-                <li>Bash/Z Shell</li>
-                <li>Vim</li>
+                <li data-tooltip="Version control system for collaborative coding.">Git/Github</li>
+                <li data-tooltip="Code editor with powerful features and extensions.">Visual Studio Code</li>
+                <li data-tooltip="Command-line interface for scripting and automation.">Bash/Z Shell</li>
+                <li data-tooltip="Text editor for efficient code editing.">Vim</li>
             </ul>
+
         </section>
         <section id="projects">
             <h2>Data</h2>
-            <!-- Notes for me: the project image and overlay need css rewriting for scaling etc -->
-            <!-- ul element in project content have no padding -->
             <!-- for responsive design I need an x button to close things -->
-            <!-- anchor tags need a colour that isn't impossible to see -->
-            <!-- I am using figures and figcaption so include them in the css (possibly copied from mdn) -->
             <div class="project">
                 <div class="project-image">
                     <img src="assets/images/pexels-tom-fisk-13066405.jpg" alt="Horse racing">
                     <div class="project-overlay">
-                        <h3>Horse Racing Predictor</h3>
-                        <p>Project objective: Train a machine learning model to predict the outcome of horse races.
-                        </p>
+                        <div class="overlay-text-container">
+                            <h3>Horse Racing Predictor</h3>
+                            <p>Project objective: Train a machine learning model to predict the outcome of horse races.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="project-details-overlay">
@@ -148,12 +150,9 @@
                             crucial for
                             the accurate functioning of the models.</p>
                         <h5>Data Processing</h5>
-                        <p>Horse racing data in isolation is almost useless, with no strong correlations with anything.
-                            To
-                            begin
-                            making
-                            sense of all the data, it requires history and context.</p>
-                        <p>I engineered various features using Pandas built-in aggregation utilities. Features include
+                        <p>Horse racing data in isolation is almost useless, with no features correlating with a horse
+                            winning. To begin making sense of all the data, it requires history and context.</p>
+                        <p>I engineered various features using Pandas built-in aggregation utilities, including
                             aggregations of horse's performance over its lifetime, alongside comparisons with its
                             competitors
                             within a race.</p>
@@ -162,7 +161,7 @@
                             models
                             suffer
                             likewise, with overfitting being the biggest problem.</p>
-                        <p>The benchmark for a model is around 13% precision. I arrived at this figure by running a
+                        <p>My benchmark for a model is around 13% precision. I arrived at this figure by running a
                             simulation which
                             randomly
                             picked one
@@ -173,8 +172,16 @@
                             both
                             able to
                             capture complex relationships within data.</p>
-                        <p>By carefully balancing parameters, the neural network to predict winners with around 25%
-                            success,
+                        <figure>
+                            <img src="assets/images/confusionMatrix.png"
+                                alt="Confusion matrix showing Random Forest Classifier model performance" \>
+                            <figcaption>Confusion matrix to show model performance of a Random Forest Classifier. This
+                                shows the trade-off in sacrificing number of predictions for good precision.
+                            </figcaption>
+                        </figure>
+                        <p>By carefully balancing parameters, the neural network is able to predict winners with around
+                            25%
+                            precision,
                             which
                             is a mild
                             success when compared to the benchmark.</p>
@@ -193,7 +200,12 @@
                             I may suffer long drawdowns, however, the general trend is upwards and most days are winning
                             days.
                         </p>
-                        <img src="assets/images/candlesticks.png" alt="Candlestick Chart showing betting progress" \>
+                        <figure>
+                            <img src="assets/images/candlesticks.png" alt="Candlestick chart showing profit over time"
+                                \>
+                            <figcaption>Candlesticks chart showing profit based on level £1 stakes
+                            </figcaption>
+                        </figure>
                         <h5>Does It Make Money? The Long Answer</h5>
                         <p>We must be careful before we say a betting strategy is successful. Whilst trialling betting
                             strategies
@@ -228,16 +240,19 @@
                             the
                             puzzle.
                         </p>
+                        <p>This project is also the first time I have ensembled multiple models in order to play on the
+                            strengths of both. This works well with the domain of horse racing, as the difficulty in
+                            making consistent predictions means both models may complement each other. If one model
+                            performs poorly one day, the second model may be there to make up for it.</p>
                         <h5>The Future</h5>
                         <h6>Automation</h6>
-                        <p>This project is already automated to the point where a Bash script will gather results,
-                            racecards, perform data processing, modelling and finally email the relevant
-                            results to me.</p>
+                        <p>This project is already automated to the point where a single Bash script will gather
+                            results and racecards, then perform data processing and modelling and finally email the
+                            relevant results to me so I have access to them remotely.</p>
                         <p>This may be further automated with use of the cron utility and a system such as a Raspberry
                             Pi to host the service.</p>
                         <p>While bets are currently manually placed, Betfair Exchange has an API which can be utilised
-                            to automate betting.
-                        </p>
+                            to automate betting.</p>
                     </div>
                 </div>
             </div>
@@ -246,21 +261,23 @@
                 <div class="project-image">
                     <img src="assets/images/codewars.png" alt="Codewars problems" />
                     <div class="project-overlay">
-                        <h3>Codewars Web Scraper and Data Visualisation</h3>
-                        <p>Project Objective: Build a Web Scraper for Codewars Problems and Create a Data
-                            Visualization
-                            Notebook</p>
+                        <div class="overlay-text-container">
+                            <h3>Codewars Web Scraper and Data Visualisation</h3>
+                            <p>Project Objective: Build a Web Scraper for Codewars Problems and Create a Data
+                                Visualization
+                                Notebook</p>
+                        </div>
                     </div>
                 </div>
                 <div class="project-details-overlay">
                     <div class="project-content">
                         <h3>Codewars Web Scraper and Data Visualisation</h3>
-                        <h4>Project Motivation</h4>
+                        <h4>Motivation</h4>
                         <h5>Inspiration</h5>
                         <p>I have been using coding problems to further my technical capabilities since I started
                             learning
                             Python. I also
-                            use it to explore new languages and paradigms.</p>
+                            use them as a way to explore new languages and paradigms.</p>
                         <p>My platform of choice is <a href="https://www.codewars.com/about"
                                 target="_blank">Codewars</a>,
                             and as I
@@ -336,7 +353,7 @@
                             it as I
                             solve more problems.</p>
 
-                        <h6>Future Steps</h6>
+                        <h6>Further Development</h6>
                         <p>The Codewars scraper does not include any error trapping for if the user enters incorrect
                             login credentials or if the scraper is comes across an unexpected programming language, as
                             detailed below.</p>
@@ -367,28 +384,135 @@
             </div>
             <h2>Games</h2>
             <div class="project">
-                <h3>Other Minds</h3>
-                <p>Project overview: a 2d platformer where players can take control of any other entity in the game.</p>
+                <div class="project-image">
+                    <img src="assets/images/otherminds.png" alt="Other Minds title image">
+                    <div class="project-overlay">
+                        <div class="overlay-text-container">
+                            <h3>Other Minds</h3>
+                            <p>Project objective: a 2d platformer where players can take control of any other entity in
+                                the
+                                game.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details-overlay">
+                    <div class="project-content">
+                        <h3>Other Minds</h3>
+                        <h4>Motivation</h4>
+                        <h5>Inspiration</h5>
+                        <p>Other Minds was conceptually influenced by philosophy. Inparticular, why are we
+                            ourselves? Why can't we know what it is to be
+                            other people? This is a concept in philosophy known as
+                            the problem of other minds - how do you know others experience consciousness?</p>
+                        <p>Other Minds is a game that explores this concept. You play as the main character Ed, who is
+                            accompanied by a floating green whisp called Sage who can possess other entities in the
+                            game. The player can then control these entities, and use their abilities to solve puzzles
+                            and progress through the game.</p>
+                        <p>It was heavily influenced by the classic Gamemaker indie game <a
+                                href="http://autofish.net/clysm/art/video_games/seiklus/index.html"
+                                target="_blank">Seiklus.</a></p>
+
+                        <h4>Project Overview</h4>
+                        <h5>Modular Design</h5>
+                        <p>Other Minds is a relatively large, open world 2d platformer. Modular, re-usable code helped
+                            to streamline the development process and made the addition of new features simple.</p>
+                        <p>Since every character is controllable, their abilities are determined by variables
+                            dictating things such as speed, acceleration and jump height, alongside a list of boolean
+                            variables to determine which abilities are and are not available. Every character runs on
+                            the exact same script. Using a finite state machine, both the main character and various
+                            other characters, such as a bird, run on the same code, which demonstrates how powerful this
+                            concept is.</p>
+
+                        <figure>
+                            <img src="assets/images/otherMindsGif.gif" alt="A challenging scenario in Other Minds" />
+                            <figcaption>A challenging scenario in Other Minds</figcaption>
+                        </figure>
+
+                        <h5>Character AI</h5>
+                        <p>Every character in the game should move in the same way whilst they have 'free will' and
+                            whilst the player is controlling them. To accomplish this, characters use simulated key
+                            presses to create movement. The game world is supposed to be full of characters who are able
+                            to exhibit behaviours, be it slimes who have fun jumping up and down, or a nervous character
+                            who paces back and forth. The use of simulating movement as if the player were controlling
+                            them allows this.</p>
+                        <p>Using some situational awareness, this can allow for extremely complex emergent behaviour for
+                            characters. Of note is the first boss fight of the game where the player faces antagonist Dr
+                            Death. Upon defeating his machines, Dr Death himself runs into the boss arena to try and
+                            attack you. He is able to determine which platforms he can reach and calculate which is best
+                            for reaching his target, the player. The emergent behaviour based on a few simple rules
+                            allows the AI to become very complex, and infact, I had to deliberately dumb down the
+                            behaviour and create 'mistakes' because the boss fight became way too difficult.</p>
+
+                        <figure>
+                            <img src="assets/images/otherMindsDrDeath.png" alt="Dr Death boss fight in Other Minds" />
+                            <figcaption>Dr Death boss fight in Other Minds - Dr Death is able to navigate platforms to
+                                pathfind to the player</figcaption>
+                        </figure>
+
+                        <h4>Conclusion</h4>
+                        <h5>Personal Growth and Lessons Learnt</h5>
+                        <p>Other Minds was my first large project after a long break from programming. Whilst this
+                            project does have somewhat organised code, my coding ability improved meaning that in future
+                            I could bring forward what I learnt. This is demonstrated in project such as <i><a
+                                    href="https://eatkin.itch.io/ben-was-assimilated" target="_blank">
+                                    Ben Was Assimilated
+                                </a></i>, which made the process of adding new enemies or items to the game a
+                            case of adding one line of code, and the modularity of the code did the rest.</p>
+                        <p>The game also required careful management of data, for which I made use of bitmasking and
+                            data structures. Bitmasking is a powerful concept which I have used in almost every
+                            project since.</p>
+                        <p>This project also took place over the course of several years, and maintaining a project for
+                            that long can be difficult in terms of motivation.</p>
+
+                        <h5>The Future</h5>
+                        <p>Other Minds has now been shelved and no more work will be done on it. I have often considered
+                            making a sequel, or re-imagining, since my abilities have grown hugely since I first
+                            embarked on making this game. I would be able to combine everything I have learnt over the
+                            past few years to create a more immersive experience, with improved game mechanics and
+                            storytelling.</p>
+                        <p>The one large barrier is time - producing a project this large can take it's toll, especially
+                            when you are working fulltime alongside.</p>
+
+                        <h5>Project Links</h5>
+                        <ul>
+                            <li><a href="https://eatkin.itch.io/other-minds" target="_blank">Other Minds on Itch IO</a>
+                            </li>
+                            <li><a href="https://github.com/Eatkin/OtherMinds" target="_blank">Other Minds Github
+                                    Repository</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=0AfXycXbqj8" target="_blank">Other Minds
+                                    Trailer</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=IJQ1HT4kFHg" target="_blank">Other Minds
+                                    Longplay</a></li>
+                        </ul>
+
+                    </div>
+                </div>
             </div>
+
             <div class="project">
                 <h3>Date &amp; Game Demo Reel</h3>
                 <p>Project overview: a dating app that allows people to connect and play games together.</p>
             </div>
             <div class="project">
                 <h3>A Relaxing Typing Game</h3>
-                <p>Project overview: a pure typing game where players can type out public domain stories and poetry in a
+                <p>Project overview: a pure typing game where players can type out public domain stories and
+                    poetry in a
                     relaxed atmosphere.</p>
             </div>
             <h2>Web</h2>
             <div class="project">
                 <h3>Personal Homepage</h3>
-                <p>This is my personal homepage which I use to host everything I have made. It uses a no-Javascript
+                <p>This is my personal homepage which I use to host everything I have made. It uses a
+                    no-Javascript
                     approach
-                    to maximise compatibility, which required some very creative use of CSS to create features such as
+                    to maximise compatibility, which required some very creative use of CSS to create
+                    features such as
                     filtering by tags.</p>
-                <p>I upload dynamic content such as a blog and webcomic, and have built automation tools using Python to
+                <p>I upload dynamic content such as a blog and webcomic, and have built automation tools
+                    using Python to
                     construct webpages dynamically.</p>
-                <p>As the site is hosted on Neocities, I make use of the Neocities API and file change tracking in order
+                <p>As the site is hosted on Neocities, I make use of the Neocities API and file change
+                    tracking in order
                     to
                     automate the upload of content.</p>
             </div>
@@ -403,37 +527,48 @@
             <h2>Blogs</h2>
             <div class="project">
                 <h3>Coding Heaven</h3>
-                <p>Coding Heaven is an entertaining blog features personal coding stories and fun, creative approaches
+                <p>Coding Heaven is an entertaining blog features personal coding stories and fun, creative
+                    approaches
                     to
                     computer programming.</p>
-                <p>Examples include "Off-By-One Horrors", the story of how it took me three weeks to solve an off by one
-                    error, along with "Hello World but it Becomes Increaasingly Disturbing", a look back at the classic
+                <p>Examples include "Off-By-One Horrors", the story of how it took me three weeks to solve
+                    an off by one
+                    error, along with "Hello World but it Becomes Increaasingly Disturbing", a look back at
+                    the classic
                     Hello World program and how we can have fun by completely over-engineering it.</p>
             </div>
             <div class="project">
                 <h3>Edward Atkin's Blog</h3>
                 <p>This is my personal blog I use for life annecdotes, memories and personal reflection.</p>
-                <p>Examples include "In Which I Break Free From My Sister's Banana Boycott", the story of how I didn't
+                <p>Examples include "In Which I Break Free From My Sister's Banana Boycott", the story of
+                    how I didn't
                     eat
-                    bananas for 25 years because my sister didn't like them, and "On The Dustry Drawers of Abandoned
-                    Hobbies", a reflection on hobbies I felt very enthusiastic for, only for them to be left to gather
+                    bananas for 25 years because my sister didn't like them, and "On The Dustry Drawers of
+                    Abandoned
+                    Hobbies", a reflection on hobbies I felt very enthusiastic for, only for them to be left
+                    to gather
                     dust.
                 </p>
             </div>
             <div class="project">
                 <h3>Weird Indie Shit</h3>
-                <p>Being an indie game developer has given me experience in the sheer difficulty of getting noticed, and
+                <p>Being an indie game developer has given me experience in the sheer difficulty of getting
+                    noticed, and
                     as
-                    programming video games becomes more accessible day by day, more and more people are uploading their
+                    programming video games becomes more accessible day by day, more and more people are
+                    uploading their
                     games to share.</p>
-                <p>After the observation that several hundred games are uploaded to Itch IO per day, most of which would
-                    never be seen or played, I decided to embark on some indie game archaeology to discuss a few games
+                <p>After the observation that several hundred games are uploaded to Itch IO per day, most of
+                    which would
+                    never be seen or played, I decided to embark on some indie game archaeology to discuss a
+                    few games
                     that
                     nobody has ever heard of.</p>
             </div>
             <h2>Miscellaneous</h2>
             <h3>Udemy Certificats</h3>
-            <p>I enjoy learning and continuous personal development, and find Udemy to be a valuable resource for
+            <p>I enjoy learning and continuous personal development, and find Udemy to be a valuable
+                resource for
                 educational content. Here you can find a list of courses which I have completled.</p>
             <div class="project">
                 <h3>The Git and Github Bootcamp</h3>
@@ -441,7 +576,8 @@
             </div>
             <div class="project">
                 <h3>Design a CPU</h3>
-                <p>A course covering the design of a CPU from scratch, from primitive circuitry to full assembler.</p>
+                <p>A course covering the design of a CPU from scratch, from primitive circuitry to full
+                    assembler.</p>
             </div>
         </section>
         <section id="contact">

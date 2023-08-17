@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Atkin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hello, I'm Edward Atkin. I've been working with code since I was around 11 years old when I decided I
+                wanted
+                to make my own games.</p>
+            <p>I have experience in web development, scientific computing and game development, but more recently I am
+                looking to specialise in the field of data science.</p>
+            <p>I have learnt Data Science through Le Wagon's Data Science Bootcamp, which is one of the best rated
+                bootcamps
+                in the world.</p>
+        </section>
+        <section id="skills">
+            <h2>My Technical Skills</h2>
+            <h3>Data</h3><ul><li data-tooltip="Versatile scripting language for various applications.">Python</li><li data-tooltip="Database query language for data manipulation.">SQL</li><li data-tooltip="Statistical modeling and analysis library in Python.">StatsModels</li><li data-tooltip="Machine learning library for Python.">SciKit-Learn</li><li data-tooltip="Open-source machine learning framework by Google.">TensorFlow</li><li data-tooltip="High-level neural networks API running on top of TensorFlow.">Keras</li><li data-tooltip="Python plotting library for creating visualizations.">Matplotlib</li></ul><h3>Games</h3><ul><li data-tooltip="Game development platform for 2D games.">Gamemaker Studio 2</li><li data-tooltip="Real-time communication library for web applications.">Socket IO</li></ul><h3>Web</h3><ul><li data-tooltip="Markup language for structuring web content.">HTML5</li><li data-tooltip="Stylesheet language for designing web layouts.">CSS3</li><li data-tooltip="Programming language for interactive web elements.">JavaScript</li><li data-tooltip="Design approach for adapting to various devices.">Responsive design</li></ul><h3>Developer Skills</h3><ul><li data-tooltip="Version control system for collaborative coding.">Git/Github</li><li data-tooltip="Code editor with powerful features and extensions.">Visual Studio Code</li><li data-tooltip="Command-line interface for scripting and automation.">Bash/Z Shell</li><li data-tooltip="Text editor for efficient code editing.">Vim</li></ul>
+        </section>
+        <section id="projects">
+            <h2>Data</h2><div class="project">
+    <div class="project-image">
+        <img src="assets/images/pexels-tom-fisk-13066405.jpg" alt="Horse racing">
+        <div class="project-overlay">
+            <div class="overlay-text-container">
+                <h3>Horse Racing Predictor</h3>
+                <p>Project objective: Train a machine learning model to predict the outcome of horse races.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="project-details-overlay">
+        <div class="project-content">
+            <h3>Horse Racing Predictor</h3>
+            <h4>Motivation</h4>
+            <h5>Inspiration</h5>
+            <p>My first step into the world of gambling was through matched betting - a no-risk methodology
+                to
+                using
+                Bookmaker
+                offers to guarantee profits.</p>
+            <p>Ever since I began using matched betting to make money, I have become interested in betting
+                systems and technically-driven approaches to gambling.</p>
+            <p>As is the case for almost all gamblers, my success was limited, and due to a general aversion
+                to
+                losing
+                money, I
+                eventually shelved the idea.</p>
+            <p>It wasn't until starting the Le Wagon Data Science bootcamp that some people mentioned their
+                interest
+                in
+                sports
+                betting. My
+                interest was piqued once again.</p>
+            <h5>Advantages of Machine Learning Methods</h5>
+            <p>Gambling is addictive. This is a very well known result, and it's very easy to get
+                emotionally
+                involved
+                with
+                it.
+                Losing can result in 'revenge betting'. It
+                can also result in over-analysing your losses to try find reasons where none exist, or
+                thoughts such as 'I
+                <i>almost</i>
+                won!'.
+            </p>
+            <p>A robo-betting strategy provided by a machine learning model removes a lot of these factors.
+                The
+                bettor
+                does not
+                have to review racecards, they do not have to think they made a bad decision and they do not
+                need to
+                analyse
+                their wins and losses.</p>
+            <p>Although emotions are not completely removed, the urges to overanalyse and seek revenge after
+                a
+                loss
+                is
+                no longer
+                a factor.</p>
+            <h4>Project Overview</h4>
+            <h5>Objectives</h5>
+            <p>Create a model that is able to predict the outcome of horse races.</p>
+            <h5>Data Collection</h5>
+            <p>Horse racing data is difficult to get ahold of, with only a few patchy datasets on Kaggle
+                available.
+            </p>
+            <p>Searching Github I came across <a href="https://github.com/joenano/rpscrape"
+                    target="_blank">RPScrape</a>, a
+                utility for scraping results from Racing Post. From this I gathered around 1.5 million
+                datapoints
+                for
+                use in
+                model training.</p>
+            <p>I have subsequently built automated systems which will scrape results daily, as up-to-date
+                data
+                is
+                crucial for
+                the accurate functioning of the models.</p>
+            <h5>Data Processing</h5>
+            <p>Horse racing data in isolation is almost useless, with no features correlating with a horse
+                winning. To begin making sense of all the data, it requires history and context.</p>
+            <p>I engineered various features using Pandas built-in aggregation utilities, including
+                aggregations of horse's performance over its lifetime, alongside comparisons with its
+                competitors
+                within a race.</p>
+            <h5>Model Training</h5>
+            <p>As horse racing is notoriously difficult to predict with any consistency, machine learning
+                models
+                suffer
+                likewise, with overfitting being the biggest problem.</p>
+            <p>My benchmark for a model is around 13% precision. I arrived at this figure by running a
+                simulation which
+                randomly
+                picked one
+                horse from every race, resulting in a 13% success rate.</p>
+            <p>I have trained two separate models, a deep neural network and a random forest classifier,
+                which
+                are
+                both
+                able to
+                capture complex relationships within data.</p>
+            <figure>
+                <img src="assets/images/confusionMatrix.png"
+                    alt="Confusion matrix showing Random Forest Classifier model performance" \>
+                <figcaption>Confusion matrix to show model performance of a Random Forest Classifier. This
+                    shows the trade-off in sacrificing number of predictions for good precision.
+                </figcaption>
+            </figure>
+            <p>By carefully balancing parameters, the neural network is able to predict winners with around
+                25%
+                precision,
+                which
+                is a mild
+                success when compared to the benchmark.</p>
+            <p>My second model, using ensemble machine learning algorithms, allowed my model to hit around
+                60%
+                precision
+                on
+                predicting winners, but at the cost of providing a winning candidate only once a week on
+                average.
+            </p>
+            <h4>Conclusion</h4>
+            <h5>Does It Make Money? The Short Answer</h5>
+            <p>Yes. I have had success with my strategy. The nature of horse racing and its inherent
+                unpredictability
+                means that
+                I may suffer long drawdowns, however, the general trend is upwards and most days are winning
+                days.
+            </p>
+            <figure>
+                <img src="assets/images/candlesticks.png" alt="Candlestick chart showing profit over time" \>
+                <figcaption>Candlesticks chart showing profit based on level £1 stakes
+                </figcaption>
+            </figure>
+            <h5>Does It Make Money? The Long Answer</h5>
+            <p>We must be careful before we say a betting strategy is successful. Whilst trialling betting
+                strategies
+                over my
+                dataset, I found that merely randomly picking a horse from each race can occassionally
+                result in
+                enormous
+                profits (although most of the time it results in a loss).</p>
+            <p>There is no way to tell if the betting strategy is going to be successful forever, it is
+                merely
+                that
+                your
+                confidence increases the longer it is profitable.</p>
+            <h5>Personal Growth and Lessons Learnt</h5>
+            <p>This project was a huge exercise in taking data with almost no meaningful features and
+                turning it
+                into
+                something
+                useful.</p>
+            <p>Upon completing my first model, which took me around a month, I found the results to be
+                disappointing. At
+                this
+                point, it would have been easy to give up and move on, but I instead tried to further my
+                domain
+                knowledge in
+                horse racing, which lead to reading about the <a href="https://en.wikipedia.org/wiki/Beyer_Speed_Figure"
+                    , target="_blank">Bayer Speed
+                    Figures</a> used in Hong Kong races. Inspired by this I
+                created my own speed ratings to benchmark horses against, and this proved to be a crucial
+                piece
+                of
+                the
+                puzzle.
+            </p>
+            <p>This project is also the first time I have ensembled multiple models in order to play on the
+                strengths of both. This works well with the domain of horse racing, as the difficulty in
+                making consistent predictions means both models may complement each other. If one model
+                performs poorly one day, the second model may be there to make up for it.</p>
+            <h5>The Future</h5>
+            <h6>Automation</h6>
+            <p>This project is already automated to the point where a single Bash script will gather
+                results and racecards, then perform data processing and modelling and finally email the
+                relevant results to me so I have access to them remotely.</p>
+            <p>This may be further automated with use of the cron utility and a system such as a Raspberry
+                Pi to host the service.</p>
+            <p>While bets are currently manually placed, Betfair Exchange has an API which can be utilised
+                to automate betting.</p>
+        </div>
+    </div>
+</div><div class="project">
+    <div class="project-image">
+        <img src="assets/images/codewars.png" alt="Codewars problems" />
+        <div class="project-overlay">
+            <div class="overlay-text-container">
+                <h3>Codewars Web Scraper and Data Visualisation</h3>
+                <p>Project Objective: Build a Web Scraper for Codewars Problems and Create a Data
+                    Visualization
+                    Notebook</p>
+            </div>
+        </div>
+    </div>
+    <div class="project-details-overlay">
+        <div class="project-content">
+            <h3>Codewars Web Scraper and Data Visualisation</h3>
+            <h4>Motivation</h4>
+            <h5>Inspiration</h5>
+            <p>I have been using coding problems to further my technical capabilities since I started
+                learning
+                Python. I also
+                use them as a way to explore new languages and paradigms.</p>
+            <p>My platform of choice is <a href="https://www.codewars.com/about" target="_blank">Codewars</a>,
+                and as I
+                racked up solutions I wanted a way to be able to extract them all.</p>
+            <p>As I was learning new concepts with Le Wagon, I decided to use this as an opportunity to
+                build a
+                web scraper and
+                data visualisation project with my newly learnt skills.</p>
+            <h4>Project Overview</h4>
+            <h5>Project Objectives</h5>
+            <p>The primary goal of this project is to build a customised web scraper for Codewars problems
+                and
+                create an
+                interactive data visualisation notebook to accompany the problems.</p>
+            <h5>Data Collection</h5>
+            <p>Initially I built a static webscraper, requiring me to preload the page with the number of
+                problems I wanted to
+                scrape and save it locally. Codewars loads solutions dynamically, so as I solved more
+                problems,
+                this became more
+                cumbersome.</p>
+            <p>I later updated the scraper to use Selenium to login to Codewars using a headless browser and
+                simulate scrolling
+                to the bottom of the page. Beautiful Soup then parses all the problems, which are saved
+                locally and organised into folders based on the problem's programming language.</p>
+
+            <figure>
+                <img src="assets/images/codewarsScraper.png" alt="Codewars scraper running in command line" />
+                <figcaption>The Codewars Scraper is a command line based Python program</figcaption>
+            </figure>
+
+            <h5>Data Visualisation</h5>
+            <p>Instead of just leaving these scraped problems to sit archived on my hard disk, I decided to
+                bring it to life by
+                creating a Jupyter Notebook to visualise the data and explore interesting features.</p>
+            <p>By employing libraries such as Matplotlib and Seaborn, I'm able to visualise my problem
+                solving
+                behaviour over
+                time.</p>
+
+            <figure>
+                <img src="assets/images/codewarsDifficultyChart.png"
+                    alt="Chart showing distribution of difficulties for each programming language" />
+                <figcaption>Chart showing distribution of difficulties for each programming language
+                </figcaption>
+            </figure>
+
+            <p>For example, I can see how many problems I solved each day, how many problems I solved in
+                each
+                language, and how
+                many problems I solved in each difficulty.</p>
+            <p>I also use the Codewars API to collect additional information about problems, which allows me
+                to
+                uncover novel
+                insights such as the 'rarest kata', the Codewars problem I've solved that has the least
+                solved,
+                or the 'most
+                difficult kata', the Codewars problem that has the lowest rate of completion.</p>
+            <h5>Impact and Future Steps</h5>
+            <p>This project forms the foundation for future explorations in coding challenges and data
+                analysis.
+            </p>
+            <p>The Jupyter Notebook can handle problems dynamically, meaning it is self-updating as I solve
+                more
+                problems.</p>
+            <h4>Conclusion</h4>
+            <p>My Codewars Web Scraper and Data Visualisation project shows my passion for coding, data
+                exploration, and
+                problem-solving.</p>
+            <p>The Jupyter Notebook is a great way to visualise the progress I've made and I look forward to
+                continuing to use
+                it as I
+                solve more problems.</p>
+
+            <h6>Further Development</h6>
+            <p>The Codewars scraper does not include any error trapping for if the user enters incorrect
+                login credentials or if the scraper is comes across an unexpected programming language, as
+                detailed below.</p>
+            <p>The Codewars scraper contains a dictionary matching programming languages to file extensions
+                and comment syntax, this only contains the programming languages I have used on Codewars.
+                This dictionary may be extended to contain details for all programming languages Codewars
+                offers.</p>
+
+            <h6>Project Links</h6>
+            <ul>
+                <li><a href="https://github.com/Eatkin/codewars-scraper" target="_blank">Codewars
+                        Scraper
+                        Github Repository</a></li>
+                <li><a href="https://github.com/Eatkin/codewars-data-analysis" target="_blank">Codewars
+                        Analysis and Data Visualisation Github Repository</a></li>
+                <li><a href="https://eatkin.github.io/codewars-data-analysis/#/" target="_blank">Codewars
+                        Analysis and Data Visualisation Slides</a></li>
+                <li><a href="https://github.com/Eatkin/codewars-solutions" target="_blank">Codewars
+                        Solutions Github Repository</a></li>
+            </ul>
+        </div>
+    </div>
+</div><h2>Games</h2><div class="project">
+    <div class="project-image">
+        <img src="assets/images/otherminds.png" alt="Other Minds title image">
+        <div class="project-overlay">
+            <div class="overlay-text-container">
+                <h3>Other Minds</h3>
+                <p>Project objective: a 2d platformer where players can take control of any other entity in
+                    the
+                    game.</p>
+            </div>
+        </div>
+    </div>
+    <div class="project-details-overlay">
+        <div class="project-content">
+            <h3>Other Minds</h3>
+            <h4>Motivation</h4>
+            <h5>Inspiration</h5>
+            <p>Other Minds was conceptually influenced by philosophy. Inparticular, why are we
+                ourselves? Why can't we know what it is to be
+                other people? This is a concept in philosophy known as
+                the problem of other minds - how do you know others experience consciousness?</p>
+            <p>Other Minds is a game that explores this concept. You play as the main character Ed, who is
+                accompanied by a floating green whisp called Sage who can possess other entities in the
+                game. The player can then control these entities, and use their abilities to solve puzzles
+                and progress through the game.</p>
+            <p>It was heavily influenced by the classic Gamemaker indie game <a
+                    href="http://autofish.net/clysm/art/video_games/seiklus/index.html" target="_blank">Seiklus.</a></p>
+
+            <h4>Project Overview</h4>
+            <h5>Modular Design</h5>
+            <p>Other Minds is a relatively large, open world 2d platformer. Modular, re-usable code helped
+                to streamline the development process and made the addition of new features simple.</p>
+            <p>Since every character is controllable, their abilities are determined by variables
+                dictating things such as speed, acceleration and jump height, alongside a list of boolean
+                variables to determine which abilities are and are not available. Every character runs on
+                the exact same script. Using a finite state machine, both the main character and various
+                other characters, such as a bird, run on the same code, which demonstrates how powerful this
+                concept is.</p>
+
+            <figure>
+                <img src="assets/images/otherMindsGif.gif" alt="A challenging scenario in Other Minds" />
+                <figcaption>A challenging scenario in Other Minds</figcaption>
+            </figure>
+
+            <h5>Character AI</h5>
+            <p>Every character in the game should move in the same way whilst they have 'free will' and
+                whilst the player is controlling them. To accomplish this, characters use simulated key
+                presses to create movement. The game world is supposed to be full of characters who are able
+                to exhibit behaviours, be it slimes who have fun jumping up and down, or a nervous character
+                who paces back and forth. The use of simulating movement as if the player were controlling
+                them allows this.</p>
+            <p>Using some situational awareness, this can allow for extremely complex emergent behaviour for
+                characters. Of note is the first boss fight of the game where the player faces antagonist Dr
+                Death. Upon defeating his machines, Dr Death himself runs into the boss arena to try and
+                attack you. He is able to determine which platforms he can reach and calculate which is best
+                for reaching his target, the player. The emergent behaviour based on a few simple rules
+                allows the AI to become very complex, and infact, I had to deliberately dumb down the
+                behaviour and create 'mistakes' because the boss fight became way too difficult.</p>
+
+            <figure>
+                <img src="assets/images/otherMindsDrDeath.png" alt="Dr Death boss fight in Other Minds" />
+                <figcaption>Dr Death boss fight in Other Minds - Dr Death is able to navigate platforms to
+                    pathfind to the player</figcaption>
+            </figure>
+
+            <h4>Conclusion</h4>
+            <h5>Personal Growth and Lessons Learnt</h5>
+            <p>Other Minds was my first large project after a long break from programming. Whilst this
+                project does have somewhat organised code, my coding ability improved meaning that in future
+                I could bring forward what I learnt. This is demonstrated in project such as <i><a
+                        href="https://eatkin.itch.io/ben-was-assimilated" target="_blank">
+                        Ben Was Assimilated
+                    </a></i>, which made the process of adding new enemies or items to the game a
+                case of adding one line of code, and the modularity of the code did the rest.</p>
+            <p>The game also required careful management of data, for which I made use of bitmasking and
+                data structures. Bitmasking is a powerful concept which I have used in almost every
+                project since.</p>
+            <p>This project also took place over the course of several years, and maintaining a project for
+                that long can be difficult in terms of motivation.</p>
+
+            <h5>The Future</h5>
+            <p>Other Minds has now been shelved and no more work will be done on it. I have often considered
+                making a sequel, or re-imagining, since my abilities have grown hugely since I first
+                embarked on making this game. I would be able to combine everything I have learnt over the
+                past few years to create a more immersive experience, with improved game mechanics and
+                storytelling.</p>
+            <p>The one large barrier is time - producing a project this large can take it's toll, especially
+                when you are working fulltime alongside.</p>
+
+            <h5>Project Links</h5>
+            <ul>
+                <li><a href="https://eatkin.itch.io/other-minds" target="_blank">Other Minds on Itch IO</a>
+                </li>
+                <li><a href="https://github.com/Eatkin/OtherMinds" target="_blank">Other Minds Github
+                        Repository</a></li>
+                <li><a href="https://www.youtube.com/watch?v=0AfXycXbqj8" target="_blank">Other Minds
+                        Trailer</a></li>
+                <li><a href="https://www.youtube.com/watch?v=IJQ1HT4kFHg" target="_blank">Other Minds
+                        Longplay</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+        </section>
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <p>You can reach me at example@email.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
