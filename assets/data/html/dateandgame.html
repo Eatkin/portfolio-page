@@ -1,0 +1,72 @@
+<div class="project">
+    <div class="project-image">
+        <img src="assets/images/dateandgame.png" alt="Date and Game Project">
+        <div class="project-overlay">
+            <div class="overlay-text-container">
+                <h3>Date and Game</h3>
+                <p>Project objective: Create a framework for 2-player online games to integrate into a dating app.</p>
+            </div>
+        </div>
+    </div>
+    <div class="project-details-overlay">
+        <div class="project-content">
+            <h3>Date and Game</h3>
+            <h4>Motivation</h4>
+            <h5>Inspiration</h5>
+            <p>Date and Game is a company aiming to integrate online games into a dating app. Users can match with other
+                users and connect to play games together.</p>
+            <p>I was the lead games programmer for the company, in charge of creating the online game framework to
+                integrate with the Date &amp; Game API and programming gameplay.</p>
+            <p>I collaborated with game designers and artists to create bespoke, two player experiences, and also
+                collaborated with the app developers for API integration.</p>
+
+            <figure>
+                <img src="assets/images/route69.png" alt="Route 69">
+                <figcaption>In <i>Route 69</i>, players use various tools to solve puzzles together - here they are
+                    playing noughts and crosses together</figcaption>
+            </figure>
+
+            <h4>Project Overview</h4>
+            <h5>Online Games</h5>
+            <p>I produced a robust framework using Gamemaker Studio 2 and Socket IO as the basis for all games.</p>
+            <p>I created a variety of different games from Route 69, a game where players adventure together, collecting
+                key items to solve puzzles, to PixlWave, a vaporwave stylised game where players compete to complete
+                pixel art drawings as quickly and accurately as possible.</p>
+
+            <h5>Framework</h5>
+            <p>I developed the online game framework to be as modular as possible, allowing for the creation of new
+                games with minimal effort. The basic framework allows players to send position updates and send variable
+                updates. It also keeps the game's world state synchronised, allowing for arbitrary resynchronisation -
+                e.g. if one player leaves the game, they are able to return and have the game state synchronised between
+                players.</p>
+            <p>The framework also allows arbitrary resychronisation of games. If one player leaves the game, they should
+                be able to return to the game at any point.</p>
+
+            <h5>Technical Details</h5>
+            <p>I implemented various techniques to ensure the robustness of the framework and to optimise performance.
+                This involved the use of three way handshakes, exponential backoff and data-encoding.</p>
+
+            <figure>
+                <img src="assets/images/dungeondate.png" alt="Dungeon Date" \>
+                <figcaption>In <i>Dungeon Date</i>, players collaborate to escape the dungeon, choosing how to split
+                    their loot.</figcaption>
+            </figure>
+
+            <p>Data management was crucial, due to the requirement of arbitrary resychronisation. Data structures were
+                put in place along with encoding methods to allow players to seamlessly send large amounts of data
+                easily and as necessary.</p>
+            <p>Online games pose their own unique problems due to latency. For example, one player may pick up an item,
+                then the other player may pick up the same item before the signal that the item has been picked up.
+                These sort of conflicts arise constantly and methods must be implemented for clean resolution.</p>
+
+
+            <h4>Conclusion</h4>
+            <h5>Personal Growth and Lessons Learnt</h5>
+            <p>I initially had no experience with the creation of online games, so in spite the massive learning curve
+                before me, I created robust systems and used creative problem solving to resolve any conflicts that
+                arise as a result of latency and to ensure smooth synchronisation of the games.</p>
+            <p>I also transferred the systems from Gamemaker Studio 2 to Unity, a system for which I have little
+                familiarity with.</p>
+        </div>
+    </div>
+</div>

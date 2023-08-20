@@ -1,5 +1,5 @@
 {
-    "Data": [
+    "Data Science Projects": [
         {
             "name": "Horse Racing Predictor",
             "html": "assets/data/html/horse.html"
@@ -9,10 +9,56 @@
             "html": "assets/data/html/codewars.html"
         }
     ],
-    "Games": [
+    "Game Development Projects": [
         {
             "name": "Other Minds",
             "html": "assets/data/html/otherminds.html"
+        },
+        {
+            "name": "Date and Game",
+            "html": "assets/data/html/dateandgame.html"
+        }
+    ],
+    "Web Development Projects": [
+        {
+            "name": "Personal Homepage",
+            "html": "assets/data/html/homepage.html"
+        },
+        {
+            "name": "Tombstone Tapes",
+            "html": "assets/data/html/tombstone.html"
+        },
+        {
+            "name": "DOScord",
+            "html": "assets/data/html/doscord.html"
+        }
+    ],
+    "Blogs": [
+        {
+            "name": "Coding Heaven",
+            "html": "assets/data/html/codingheaven.html"
+        },
+        {
+            "name": "Edward Atkin's Blog",
+            "html": "assets/data/html/edwardatkin.html"
+        },
+        {
+            "name": "Weird Indie Shit",
+            "html": "assets/data/html/weirdindieshit.html"
+        }
+    ],
+    "Udemy Certifications": [
+        {
+            "name": "Python for Data Science and Machine Learning Bootcamp",
+            "html": "assets/data/html/mlbootcamp.html"
+        },
+        {
+            "name": "The Git &amp; Github Bootcamp",
+            "html": "assets/data/html/gitbootcamp.html"
+        },
+        {
+            "name": "Design a CPU",
+            "html": "assets/data/html/cpu.html"
         }
     ]
 }
