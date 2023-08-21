@@ -196,6 +196,7 @@ section {
     z-index: 1;
     border-radius: 1em;
     box-shadow: 0 0 5px 1px #ff6ac1;
+    padding-bottom: 50px;
 }
 
 .project-details-overlay {

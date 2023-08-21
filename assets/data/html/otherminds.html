@@ -15,27 +15,32 @@
             <h3>Other Minds</h3>
             <h4>Motivation</h4>
             <h5>Inspiration</h5>
-            <p>Other Minds was conceptually influenced by philosophy. Inparticular, why are we
-                ourselves? Why can't we know what it is to be
-                other people? This is a concept in philosophy known as
-                the problem of other minds - how do you know others experience consciousness?</p>
-            <p>Other Minds is a game that explores this concept. You play as the main character Ed, who is
-                accompanied by a floating green whisp called Sage who can possess other entities in the
-                game. The player can then control these entities, and use their abilities to solve puzzles
-                and progress through the game.</p>
-            <p>It was heavily influenced by the classic Gamemaker indie game <a
-                    href="http://autofish.net/clysm/art/video_games/seiklus/index.html" target="_blank">Seiklus.</a></p>
+            <p><i>Other Minds</i> draws its roots from philosophy, specifically looking towards the question; why are we
+                ourselves, and why is understanding the consciousness of others so difficult? This is a concept in
+                philosophy aptly knows as the problem of other minds - how do you know others experience consciousness?
+            </p>
+            <p><i>Other Minds</i> is an exploration of this concept. You inhabit a character known as Ed, accompanied by
+                a
+                floating prescence called Sage who allows you to possess other entities in the game. Through this unique
+                mechanic, the player can step into the shoes of other characters, use them to solve puzzles and advance
+                the narrative of the game.</p>
+            <p><i>Other Minds</i> draw influence from <i>
+                    <a href="http://autofish.net/clysm/art/video_games/seiklus/index.html" target="_blank">Seiklus</a>
+                </i>, a
+                cornerstone of Gamemaker's legacy. By combining the influence of this game with innovative gameplay
+                mechanics, <i>Other Minds</i> is a game which allows the player to explore the concepts of consciousness
+                and embark on an exploratary adventure.</p>
 
             <h4>Project Overview</h4>
             <h5>Modular Design</h5>
-            <p>Other Minds is a relatively large, open world 2d platformer. Modular, re-usable code helped
-                to streamline the development process and made the addition of new features simple.</p>
-            <p>Since every character is controllable, their abilities are determined by variables
-                dictating things such as speed, acceleration and jump height, alongside a list of boolean
-                variables to determine which abilities are and are not available. Every character runs on
-                the exact same script. Using a finite state machine, both the main character and various
-                other characters, such as a bird, run on the same code, which demonstrates how powerful this
-                concept is.</p>
+            <p><i>Other Minds</i> is an expansive, open world 2d platformer. Modular, re-usable code was essential for
+                streamlining the development process and allowing the game to be both scalable and amenable to the
+                addition of new features.</p>
+            <p>As the player is free to control any character, their abilities are determined by variables
+                dictating speed, acceleration and jump height, alongside a list of boolean variables to determine which
+                skills are accessible. Using a finite state machine, both the main character and various
+                other characters, such as a bird, run on the same code, demonstrating how powerful this concept is.
+            </p>
 
             <figure>
                 <img src="assets/images/otherMindsGif.gif" alt="A challenging scenario in Other Minds" />
@@ -43,19 +48,16 @@
             </figure>
 
             <h5>Character AI</h5>
-            <p>Every character in the game should move in the same way whilst they have 'free will' and
-                whilst the player is controlling them. To accomplish this, characters use simulated key
-                presses to create movement. The game world is supposed to be full of characters who are able
-                to exhibit behaviours, be it slimes who have fun jumping up and down, or a nervous character
-                who paces back and forth. The use of simulating movement as if the player were controlling
-                them allows this.</p>
-            <p>Using some situational awareness, this can allow for extremely complex emergent behaviour for
-                characters. Of note is the first boss fight of the game where the player faces antagonist Dr
-                Death. Upon defeating his machines, Dr Death himself runs into the boss arena to try and
-                attack you. He is able to determine which platforms he can reach and calculate which is best
-                for reaching his target, the player. The emergent behaviour based on a few simple rules
-                allows the AI to become very complex, and infact, I had to deliberately dumb down the
-                behaviour and create 'mistakes' because the boss fight became way too difficult.</p>
+            <p>Character movement should be consistent whether the character has 'free will' or if the player is
+                controlling them. To accomplish this, characters use simulated key presses to create movement. The game
+                world is full of characters who are able to exhibit their unique behaviours and personalities, be it
+                slimes who have fun jumping up and down, or a nervous character who paces back and forth. The use of
+                simulating movement as if the player were controlling them allows this.</p>
+            <p>This concept can allow for extremely complex emergent behaviour for characters. Of note is the first boss
+                fight of the game where the player faces antagonist Dr Death. Upon defeating his machines, Dr Death
+                himself runs into the boss arena to try and attack you. He is able to determine which platforms he can
+                reach and calculate which is best for reaching his target; the player. A few simple rules allows the AI
+                to become very complex.</p>
 
             <figure>
                 <img src="assets/images/otherMindsDrDeath.png" alt="Dr Death boss fight in Other Minds" />
@@ -65,27 +67,27 @@
 
             <h4>Conclusion</h4>
             <h5>Personal Growth and Lessons Learnt</h5>
-            <p>Other Minds was my first large project after a long break from programming. Whilst this
-                project does have somewhat organised code, my coding ability improved meaning that in future
-                I could bring forward what I learnt. This is demonstrated in project such as <i><a
-                        href="https://eatkin.itch.io/ben-was-assimilated" target="_blank">
-                        Ben Was Assimilated
-                    </a></i>, which made the process of adding new enemies or items to the game a
-                case of adding one line of code, and the modularity of the code did the rest.</p>
-            <p>The game also required careful management of data, for which I made use of bitmasking and
+            <p><i>Other Minds</i> was my first large project after a long programming hiatus. Whilst this
+                project does have somewhat organised code, my coding ability, code modularity and project management
+                vastly improved over the course of the development process. This improvement is demonstrated in project
+                such as <i><a href="https://eatkin.itch.io/ben-was-assimilated" target="_blank">Ben Was
+                        Assimilated</a></i>, which made the process of adding new enemies or items to the game a
+                case of adding one line of code, with the modular systems managing everything else.
+            </p>
+            <p>The game also required careful data management, for which I made use of bitmasking and
                 data structures. Bitmasking is a powerful concept which I have used in almost every
                 project since.</p>
-            <p>This project also took place over the course of several years, and maintaining a project for
-                that long can be difficult in terms of motivation.</p>
+            <p>The development process took place over the course of several years, and maintaining a project for
+                that long can be difficult in terms of motivation. This taught me skills in large project management;
+                maintaining an organised task list and breaking steps down into small, manageable chunks.</p>
 
             <h5>The Future</h5>
-            <p>Other Minds has now been shelved and no more work will be done on it. I have often considered
-                making a sequel, or re-imagining, since my abilities have grown hugely since I first
-                embarked on making this game. I would be able to combine everything I have learnt over the
-                past few years to create a more immersive experience, with improved game mechanics and
-                storytelling.</p>
-            <p>The one large barrier is time - producing a project this large can take it's toll, especially
-                when you are working fulltime alongside.</p>
+            <p><i>Other Minds</i> has an unknown future as a concept and no more work will be done on the game itself,
+                however I have often considered making a sequel, or re-imagining, since my abilities have grown hugely
+                since I first embarked on making this game. I would be able to combine everything I have learnt over the
+                past few years to create a more immersive experience, with improved game mechanics and storytelling.</p>
+            <p>The one large barrier is time - producing a project this large as a solo developer can be extremely
+                consuming, especially when you are working fulltime alongside.</p>
 
             <h5>Project Links</h5>
             <ul>
