@@ -1,7 +1,0 @@
-Things to do for responsive design:
-There's a hidden header with class project-title-hidden that should only show with small screens
-There should also be a hidden description below and mouse-over image animations should be disabled
-Div widths should be widened
-Clicking project title should open the overlay as well as clicking the image
-Overlays should have a close button at the top right corner
-Js needs updating for this stuff

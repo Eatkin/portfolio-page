@@ -404,4 +404,13 @@ h6 {
         top: 10px;
         opacity: 1;
     }
+
+    .project-title-hidden {
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .project-description-hidden {
+        visibility: visible;
+    }
 }

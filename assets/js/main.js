@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectOverlays = document.querySelectorAll(".project-overlay");
     const detailsOverlays = document.querySelectorAll(".project-details-overlay");
     const closeOverlayButtons = document.querySelectorAll(".close-button");
+    const projectTitles = document.querySelectorAll(".project-title-hidden");
 
     function openDetailsOverlay(index) {
         detailsOverlays[index].classList.add("active");
@@ -25,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     projectOverlays.forEach(function (overlay, index) {
         overlay.addEventListener("click", function () {
+            openDetailsOverlay(index);
+        });
+    });
+
+    // Add listeners for the titles too (for responsiveness)
+    projectTitles.forEach(function (title, index) {
+        title.addEventListener("click", function () {
             openDetailsOverlay(index);
         });
     });
