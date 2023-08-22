@@ -27,10 +27,6 @@
         {
             "name": "Tombstone Tapes",
             "html": "assets/data/html/tombstone.html"
-        },
-        {
-            "name": "DOScord",
-            "html": "assets/data/html/doscord.html"
         }
     ],
     "Blogs": [

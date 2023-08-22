@@ -26,7 +26,7 @@ def construct_index_html(tech_skills_html, projects_html):
     with open('assets/data/html/about.html', 'r') as f:
         html = html.replace('<!-- ABOUT_ME -->', f.read())
     
-    with open('index_TEST.html', 'w') as f:
+    with open('index.html', 'w') as f:
         f.write(html)
         
 def get_projects():
