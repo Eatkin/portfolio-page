@@ -10,7 +10,7 @@ def get_tech_skills_html(tech_json):
         html += f'<h3>{tech}</h3>'
         html += '<ul>'
         for skill in tech_json[tech]:
-            html += f'<li data-tooltip="{skill["description"]}">{skill["name"]}</li>'
+            html += f'<div class="skill-wrapper"><li data-tooltip="{skill["description"]}">{skill["name"]}</li></div>'
         html += '</ul>'
     return html
 
