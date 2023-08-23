@@ -241,10 +241,12 @@ section {
 .project-title-hidden {
     color: #fffb06;
     visibility: hidden;
+    position: absolute;
 }
 
 .project-description-hidden {
     visibility: hidden;
+    position: absolute;
 }
 
 .project-content {
@@ -442,10 +444,12 @@ h6 {
     .project-title-hidden {
         visibility: visible;
         cursor: pointer;
+        position: relative;
     }
 
     .project-description-hidden {
         visibility: visible;
+        position: relative;
     }
 
     .skill-wrapper {
