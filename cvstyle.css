@@ -97,6 +97,11 @@ header {
     padding: 0 20px;
 }
 
+.emphasise {
+    font-weight: bold;
+    color: #5E4F5E;
+}
+
 ul {
     margin: 0;
     padding: 0;
