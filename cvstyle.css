@@ -1,0 +1,180 @@
+/* CSS Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IM Fell DW Pica', serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14.3px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #4A3E3E;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    border-color: #C6BFB5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #4a3e4a;
+}
+
+
+.contact-info,
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-info li {
+    /* Vertically centre text */
+    display: flex;
+    align-items: center;
+    color: #3e4a3e;
+}
+
+.material-symbols-outlined {
+    margin-right: 5px;
+}
+
+.cv-container {
+    width: 210mm;
+    height: 297mm;
+    margin: 10mm auto;
+    padding: 10mm;
+    background-color: #F3EFE5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.job {
+    margin-bottom: 8mm;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5mm;
+    font-size: 10pt;
+}
+
+#github-icon {
+    height: 22px;
+    margin-right: 5px;
+}
+
+.experience-section {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.flex-row div,
+.skills-list .flex-row li {
+    width: 50%;
+    padding: 0 5px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row div:nth-of-type(1) {
+    width: 65%;
+}
+
+.flex-row div:nth-of-type(2) {
+    width: 100%;
+}
+
+.bullet-points {
+    list-style: disc;
+    margin-left: 1em;
+}
+
+@media print {
+
+    /* Set the page width and height to that of a sheet of A4 paper */
+    @page {
+        size: A4;
+    }
+
+    .cv-container {
+        /* Not necessary - print settings in browser will remove background colour unless otherwise specified*/
+        /* background-color: #fff; */
+        box-shadow: none;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    /* Set colours to print friendly colours (optional - remove for print to pdf) */
+    body {
+        color: #000;
+    }
+
+    .contact-info li {
+        color: #000;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #000;
+    }
+
+    /* If we DO want to print in colour (which I may do for pdf export) this ensures the background colour fills the page */
+    html {
+        background-color: #f3efe5;
+    }
+}
