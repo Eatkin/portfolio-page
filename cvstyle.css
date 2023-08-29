@@ -31,6 +31,7 @@ ol {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 img {
@@ -165,6 +166,17 @@ footer {
     padding-bottom: 20px;
 }
 
+.download-link {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 3em;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media print {
 
     /* Set the page width and height to that of a sheet of A4 paper */
@@ -205,5 +217,10 @@ footer {
     /* If we DO want to print in colour (which I may do for pdf export) this ensures the background colour fills the page */
     html {
         background-color: #f3efe5;
+    }
+
+    .download-link {
+        display: none;
+        padding: 0;
     }
 }
