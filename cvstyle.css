@@ -17,11 +17,15 @@ li {
 body {
     font-family: 'IM Fell DW Pica', serif;
     font-family: 'Raleway', sans-serif;
-    font-size: 14.3px;
+    font-size: 14px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
     color: #4A3E3E;
+}
+
+.experience {
+    font-size: 12px;
 }
 
 ul,
@@ -148,7 +152,7 @@ footer {
 /* Ultra jank way of making the columns fit the same height */
 .flex-row div:nth-of-type(1) {
     font-size: 13px;
-    width: 65%;
+    width: 55%;
 }
 
 .flex-row div:nth-of-type(2) {
