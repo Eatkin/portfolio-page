@@ -1,3 +1,27 @@
+/* OLD but leaving it incase I decide to revert back to something more boring
+:root {
+    --background-colour: #f3efe5;
+    --text-colour: #4a3e3e;
+    --link-colour: #000;
+    --border-colour: #C6BFB5;
+    --main-highlight-colour: #5E4F5E;
+    --secondary-highlight-colour: #4a3e4a;
+    --tertiary-highlight-colour: #3e4a3e;
+    --callout-colour: #F3EFD5;
+} */
+
+:root {
+    --background-colour: #FAF9F5;
+    /* Pale and brighter background */
+    --text-colour: #4A3E3E;
+    --link-colour: #3498d8;
+    --border-colour: #C6BFB5;
+    --main-highlight-colour: #ff6c42;
+    --secondary-highlight-colour: #8E59B6;
+    --tertiary-highlight-colour: #603b7a;
+    --callout-colour: #F3EFE5;
+}
+
 /* CSS Reset */
 body,
 h1,
@@ -14,6 +38,11 @@ li {
     padding: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 body {
     font-family: 'IM Fell DW Pica', serif;
     font-family: 'Raleway', sans-serif;
@@ -21,7 +50,7 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    color: #4A3E3E;
+    color: var(--text-colour);
 }
 
 .experience {
@@ -35,7 +64,15 @@ ol {
 
 a {
     text-decoration: none;
-    color: #000;
+}
+
+a:not(.no-style) {
+    color: var(--link-colour);
+}
+
+a.no-style:hover {
+    color: var(--link-colour);
+    text-decoration: underline;
 }
 
 img {
@@ -44,19 +81,19 @@ img {
 }
 
 hr {
-    border-color: #C6BFB5;
+    border-color: var(--border-colour)
 }
 
 h3,
 h4,
 h5,
 h6 {
-    color: #4a3e4a;
+    color: var(--secondary-highlight-colour);
 }
 
 h1,
 h2 {
-    color: #5E4F5E;
+    color: var(--main-highlight-colour);
     font-style: bold;
 }
 
@@ -77,7 +114,7 @@ h2 {
     /* Vertically centre text */
     display: flex;
     align-items: center;
-    color: #3e4a3e;
+    color: var(--tertiary-highlight-colour);
 }
 
 .material-symbols-outlined {
@@ -89,7 +126,7 @@ h2 {
     height: 297mm;
     margin: 10mm auto;
     padding: 10mm;
-    background-color: #F3EFE5;
+    background-color: var(--background-colour);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -98,13 +135,13 @@ header {
 }
 
 .profile {
-    color: #4A3E3E;
+    color: var(--text-colour);
     padding: 0 20px;
 }
 
 .emphasise {
     font-weight: bold;
-    color: #5E4F5E;
+    color: var(--main-highlight-colour);
 }
 
 ul {
@@ -151,8 +188,18 @@ footer {
 
 /* Ultra jank way of making the columns fit the same height */
 .flex-row div:nth-of-type(1) {
-    font-size: 13px;
-    width: 55%;
+    font-size: 14px;
+    width: 45%;
+}
+
+/* Add margin between h3 elements */
+.flex-row div:nth-of-type(1) h3 {
+    margin-top: 0.8em;
+}
+
+/* Remove margin again if h3 is immediately following a h2 element */
+.flex-row div:nth-of-type(1) h2+h3 {
+    margin-top: 0;
 }
 
 .flex-row div:nth-of-type(2) {
@@ -165,7 +212,8 @@ footer {
 }
 
 .experience {
-    background-color: #F3EFD5;
+    /*background-color: var(--callout-colour);*/
+    background: linear-gradient(to right, #fcf5f5 0%, #F3EFE5 30%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     padding-bottom: 20px;
 }
@@ -181,6 +229,12 @@ footer {
     cursor: pointer;
 }
 
+/* NOTES:
+This turns on print-friendly colours for the page when printing
+However I want to print to pdf for a downloadable version, so the print friendly colours need disabling for that specifically
+This includes re-enabling the box-shadow in the experience section (but not cv-container)
+*/
+
 @media print {
 
     /* Set the page width and height to that of a sheet of A4 paper */
@@ -189,14 +243,14 @@ footer {
     }
 
     .cv-container {
-        /* Not necessary - print settings in browser will remove background colour unless otherwise specified*/
-        /* background-color: #fff; */
+        background-color: #fff;
         box-shadow: none;
         margin: 0;
         padding-bottom: 0;
     }
 
     .experience {
+        background: none;
         box-shadow: none;
     }
 
@@ -205,7 +259,9 @@ footer {
         color: #000;
     }
 
-    .contact-info li {
+    .contact-info li,
+    .profile,
+    .emphasise {
         color: #000;
     }
 
@@ -218,10 +274,16 @@ footer {
         color: #000;
     }
 
-    /* If we DO want to print in colour (which I may do for pdf export) this ensures the background colour fills the page */
-    html {
-        background-color: #f3efe5;
+    a {
+        color: #000;
     }
+
+    /* If we DO want to print in colour (which I do for pdf export) this ensures the background colour fills the page 
+    NOTE: variables do not work in media queries and this must be manually updated which is annoying */
+    /*
+    html {
+        background-color: #FAF9F5;
+    }*/
 
     .download-link {
         display: none;
