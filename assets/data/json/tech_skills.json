@@ -77,6 +77,10 @@
         {
             "name": "6502 Assembly (Atari 2600)",
             "description": "Low-level programming language for Atari 2600 games."
+        },
+        {
+            "name": "Make",
+            "description": "Build automation tool for compiling code."
         }
     ]
 }
