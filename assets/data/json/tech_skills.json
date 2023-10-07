@@ -81,6 +81,14 @@
         {
             "name": "Make",
             "description": "Build automation tool for compiling code."
+        },
+        {
+            "name": "Docker",
+            "description": "Containerisation platform for deploying applications."
+        },
+        {
+            "name": "Google Cloud Platform",
+            "description": "Cloud computing platform for hosting applications and databases."
         }
     ]
 }

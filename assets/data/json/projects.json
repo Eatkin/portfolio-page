@@ -5,6 +5,10 @@
             "html": "assets/data/html/horse.html"
         },
         {
+            "name": "Reddit Sentiment Analysis",
+            "html": "assets/data/html/redditsentiment.html"
+        },
+        {
             "name": "Codewars Analysis",
             "html": "assets/data/html/codewars.html"
         }
