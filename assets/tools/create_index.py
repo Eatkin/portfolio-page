@@ -34,6 +34,9 @@ def get_projects():
         return json.load(f)
     
 def get_projects_html(projects_json):
+    """Returns the HTML for the projects section of the index page
+    Why didn't I write my projects in markdown format?
+    Because I didn't think of it at the time, and now it's too late"""
     html = ''
     for project in projects_json:
         html += f'<h2>{project}</h2>'

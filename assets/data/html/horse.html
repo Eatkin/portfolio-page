@@ -17,105 +17,54 @@
             <div class="close-button"><img src="assets/images/cross.png" alt="Close overlay" title="Close overlay" />
             </div>
             <h3>Horse Racing Predictor</h3>
-            <h4>Motivation</h4>
-            <h5>Inspiration</h5>
+            <a class="fancy" href="https://klkp5xtyxp5xzc3bq9uemd.streamlit.app/" target="_blank">Visit the website</a>
+            <h4>Project Overview</h4>
             <p>My first step into the world of gambling was through matched betting - a no-risk methodology
-                which uses Bookmaker offers to guarantee profits. This was what sparked my interest in betting systems
+                which uses Bookmaker offers to guarantee profits. This was what first sparked my interest in betting
+                systems
                 and technically-driven approaches to gambling.</p>
-            <p>Le Wagon's Data Science bootcamp connected me with other people who were interested in sports
-                betting algorithms, and my interest was piqued once again.</p>
-
-            <h5>Advantages of Machine Learning Methods</h5>
-            <p>As gambling can be addictive, it is very easy to become emotionally involved and make bad decisions. A
+            <p>As gambling is addictive, it's very easy to become emotionally involved and make bad decisions. A
                 robo-betting strategy provided by a machine learning model removes the emotional decision making.
                 The bettor does not have to review racecards or analyse horses, nor do they need to analyse their wins
                 and losses.</p>
-            <p>Although emotions are not completely removed, a machine learning driven methodology allows the bettor to
-                focus on the long-term and not be swayed by short-term losses.</p>
+
+            <figure>
+                <img src="assets/images/predictions.png" alt="Chart of predictions" \>
+                <figcaption>The dashboard is built using Streamlit and provides raw data alongside visualisations of
+                    the predictions.</figcaption>
+            </figure>
+
+
+            <h4>Key Features</h4>
+            <ul>
+                <li>Automated data collection and racecard scraping</li>
+                <li>Two machine learning models, a deep neural network and a random forest classifier, making
+                    predictions</li>
+                <li>Data dashboard to visualise daily predictions and provide interpretations</li>
+            </ul>
+
+            <h4>Technologies Used</h4>
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Tensorflow</li>
+                <li>Scikit-learn</li>
+                <li>Streamlit</li>
+                <li>MatPlotLib</li>
+                <li>Seaborn</li>
+                <li>Docker</li>
+                <li>Google Cloud Platform</li>
+                <li>Google Big Query</li>
+            </ul>
 
             <figure>
                 <img src="assets/images/confusionMatrix.png"
                     alt="Confusion matrix showing Random Forest Classifier model performance" \>
-                <figcaption>Confusion matrix to show model performance of a Random Forest Classifier. This
-                    shows the trade-off in sacrificing number of predictions for good precision.
+                <figcaption>Confusion matrix to show model performance of a Random Forest Classifier on the data.
+                    Modelling complex data such as horse racing shows the difficulty in balancing precision and number
+                    of predictions.
                 </figcaption>
             </figure>
-
-            <h4>Project Overview</h4>
-            <h5>Objectives</h5>
-            <p>Create a model that is able to predict the outcome of horse races.</p>
-            <p>Develop a betting strategy that can leverage the model's predictions to make a profit.</p>
-
-            <h5>Data Collection</h5>
-            <p>Horse racing data is difficult to find, with only a few patchy datasets on Kaggle
-                available.</p>
-            <p>Searching Github, I came across <a href="https://github.com/joenano/rpscrape"
-                    target="_blank">RPScrape</a>, a utility for scraping results from Racing Post. From this I gathered
-                around 1.5 million datapoints for use in exploratory data analysis model training.</p>
-            <p>Using this, I have built automated systems which will scrape results daily, as up-to-date data is crucial
-                for accurate model predictions.</p>
-
-            <h5>Data Processing</h5>
-            <p>Horse racing data in isolation is almost useless, with no features correlating with a horse
-                winning. To begin making sense of all the data, it requires history and context.</p>
-            <p>I engineered various features using <i>Pandas</i> built-in aggregation utilities, including
-                aggregations of horse's performance over its lifetime, alongside comparisons with its
-                competitors within a race.</p>
-
-            <h5>Model Training</h5>
-            <p>As horse racing is notoriously difficult to predict with any consistency, machine learning
-                models suffer likewise, with overfitting being a major issue.</p>
-            <p>My benchmark for a model was defined by by running a simulation which randomly picked one horse from
-                every race, resulting in a 13% success rate.</p>
-            <p>I have trained two separate models, a deep neural network and a random forest classifier, which are both
-                able to capture complex relationships within data.</p>
-            <p>By carefully balancing parameters, the neural network is able to predict winners with around 25%
-                Precision, which is a mild success when compared to the benchmark.</p>
-            <p>My second model, using ensemble machine learning algorithms, allowed my model to hit around 60% precision
-                predicting winners, but at the cost of providing a winning candidate only once a week on average.
-            </p>
-
-            <h4>Conclusion</h4>
-            <h5>Does It Make Money? The Short Answer</h5>
-            <p>Using a well defined betting strategy, my model is able to make a profit over time.</p>
-            <figure>
-                <img src="assets/images/candlesticks.png" alt="Candlestick chart showing profit over time" \>
-                <figcaption>Candlesticks chart showing profit based on level £1 stakes
-                </figcaption>
-            </figure>
-
-            <h5>Does It Make Money? The Long Answer</h5>
-            <p>Whilst trialling betting strategies over my dataset, I found that merely randomly picking a horse from
-                each race can occassionally result in enormous profits (although most of the time it results in a loss).
-            </p>
-            <p>There is no way to tell if the betting strategy is going to be successful forever, it is merely that
-                confidence increases the longer it is profitable.</p>
-
-            <h5>Personal Growth and Lessons Learnt</h5>
-            <p>This project was a huge exercise in taking data with almost no meaningful features and
-                turning it into something useful.</p>
-            <p>Upon completing my first model, which took me around a month, I found the results to be
-                disappointing. At this point, it would have been easy to give up and move on, but I instead tried to
-                further my domain knowledge in horse racing, which lead to reading about the <a
-                    href="https://en.wikipedia.org/wiki/Beyer_Speed_Figure" , target="_blank">Bayer Speed
-                    Figures</a> used in Hong Kong races. Inspired by this I
-                created my own speed ratings to benchmark horses against, and this proved to be a crucial
-                piece of the puzzle.</p>
-            <p>This project is also the first time I have ensembled multiple models in order to play on the
-                strengths of both. This works well with the domain of horse racing, as the difficulty in
-                making consistent predictions means both models may complement each other. If one model
-                performs poorly one day, the second model may be there to make up for it, and using results that both
-                models agree on can be a good indicator of a strong candidate.</p>
-
-            <h5>The Future</h5>
-            <h6>Automation</h6>
-            <p>This project is already automated to the point where a single Bash script will gather
-                results and racecards, then perform data processing and modelling and finally email the
-                relevant results to me so I have access to them remotely.</p>
-            <p>This may be further automated with use of the cron utility and a system such as a Raspberry
-                Pi to host the service.</p>
-            <p>While bets are currently manually placed, Betfair Exchange has an API which can be utilised
-                to automate betting.</p>
         </div>
     </div>
 </div>
