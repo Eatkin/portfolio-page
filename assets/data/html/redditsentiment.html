@@ -15,8 +15,10 @@
             <div class="close-button"><img src="assets/images/cross.png" alt="Close overlay" title="Close overlay" />
             </div>
             <h3>Reddit Sentiment Analysis</h3>
-            <h4>Motivation</h4>
-            <h5>Project Outline</h5>
+            <a class="fancy" href="https://redditsentiment-ptt6c5bbso3ffaqsc6ssvs.streamlit.app/" target="_blank">Visit
+                the Website</a>
+            <a class="fancy" href="https://github.com/VoeP/reddit_sentiment" target="_blank">Source Code on GitHub</a>
+            <h4>Project Overview</h4>
             <p>This project was our final group project at the Le Wagon Data Science bootcamp.</p>
             <p>Reddit is a social media platform where users can post content and interact with other users. It is a
                 popular platform for discussion, with many subreddits dedicated to specific topics.</p>
@@ -30,54 +32,28 @@
                 <figcaption>Analysing a user inputted comment</figcaption>
             </figure>
 
-            <h4>Project Overview</h4>
-            <h5>Objectives</h5>
-            <p>Create a system for collecting Reddit comments, then analyse the sentiment and emotion of the comments
-                using Natural Language Processing (NLP).</p>
-            <p>Present the results in a dashboard, which can be used to track the sentiment and emotion of the subreddit
-                over time.</p>
-
-            <h5>Under the Hood</h5>
-            <p>The backend for the project for data collection and processing was written in Python, using the PRAW
-                library for interacting with the Reddit API.</p>
-            <p>Modelling was performed using transformers, a library for NLP tasks.</p>
-            <p>The dashboard was created using Streamlit, a Python library for creating interactive dashboards.</p>
-            <p>An API was created using FastAPI to allow the dashboard to interact with the backend.</p>
+            <h4>Key Features</h4>
+            <ul class="bullet-points">
+                <li>Automated data collection system gathering comments from Reddit's Wall Street Bets Subreddit</li>
+                <li>Natural language processing used to analyse sentiment and emotion of comments</li>
+                <li>Results presented in a dashboard, giving and overview of the Subreddit's sentiment and emotional
+                    composition</li>
+            </ul>
 
             <figure>
                 <img src="assets/images/postSentiment.png" alt="Analysing the sentiment of reddit posts" />
                 <figcaption>Analysing the sentiment of Reddit posts</figcaption>
             </figure>
 
-            <h4>Conclusion</h4>
-            <h5>Personal Growth and Lessons Learnt</h5>
-            <p>This was my first experience of working on a group project, and aside from developing technical skills,
-                it was a great opportunity to develop soft skills such as communication and teamwork.</p>
-            <p>This was also my first experience of working on a live product, and as such I worked closely with
-                deployment tools such as Docker and Google Cloud Platform services.</p>
-            <p>Furthermore, this project introduced me to the practical side of data science, demonstrating how
-                technical proficiency intertwines with user experience, performance optimisation, and scalability.</p>
-            <p>The challenges of creating a live, dynamic project honed my problem-solving skills and deepened my
-                understanding of cloud-based solutions.</p>
-
-            <h5>The Future</h5>
-            <h6>Further Development Potential</h6>
-            <p>As this was a short lived project during a part time bootcamp, there is plenty of scope for further
-                development.</p>
-            <p>An automated data processing system proved to be a challenge, as the operations were very intensive and
-                time consuming, meaning running this on Google Cloud Run was not feasible.</p>
-            <p>The project could also benefit from utilising a cloud based database system such as Google BigQuery,
-                which would
-                allow for more efficient data storage and retrieval and allow the dashboard to be updated in real time.
-            </p>
-            <p>To enhance scalability and automation, Kubernetes could be explored for container orchestration.
-                Leveraging Kubernetes would not only ensure the smooth operation of the project but also facilitate
-                fully automated processes, reducing the need for manual intervention.</p>
-
-            <h5>Project Links</h5>
-            <ul>
-                <li><a href="https://redditsentiment-ptt6c5bbso3ffaqsc6ssvs.streamlit.app/">Project Dashboard</a></li>
-                <li><a href="https://github.com/VoeP/reddit_sentiment">Project Github Repository</a></li>
+            <h4>Technologies Used</h4>
+            <ul class="bullet-points">
+                <li>Python</li>
+                <li>Plotly</li>
+                <li>FastAPI</li>
+                <li>Streamlit</li>
+                <li>Docker</li>
+                <li>Google Cloud Platform</li>
+                <li>Bash</li>
             </ul>
         </div>
     </div>

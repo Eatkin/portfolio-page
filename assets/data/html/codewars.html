@@ -1,14 +1,14 @@
 <div class="project">
     <h3 class="project-title-hidden">Codewars Web Scraper and Data Visualisation</h3>
     <p class="project-description-hidden">Project objective: Build a Web Scraper for Codewars Problems and Create a
-        Data Visualization Notebook</p>
+        Data Visualisation Notebook.</p>
     <div class="project-image">
         <img src="assets/images/codewars.png" alt="Codewars problems" />
         <div class="project-overlay">
             <div class="overlay-text-container">
                 <h3>Codewars Web Scraper and Data Visualisation</h3>
                 <p>Project objective: Build a Web Scraper for Codewars Problems and Create a Data
-                    Visualization Notebook</p>
+                    Visualisation Notebook.</p>
             </div>
         </div>
     </div>
@@ -17,43 +17,24 @@
             <div class="close-button"><img src="assets/images/cross.png" alt="Close overlay" title="Close overlay" />
             </div>
             <h3>Codewars Web Scraper and Data Visualisation</h3>
-            <h4>Motivation</h4>
-            <h5>Inspiration</h5>
-            <p>I have been using coding problems to further my technical capabilities since I started
-                learning Python and also use them as a way to explore new languages and paradigms.</p>
-            <p>My platform of choice is <i><a href="https://www.codewars.com/about" target="_blank">Codewars</a></i>,
-                and as I racked up solutions I wanted a way to be able to extract them all.</p>
-            <p>As I was learning new concepts with Le Wagon, I decided to use this as an opportunity to build a web
-                scraper and data visualisation project with my newly learnt skills.</p>
+
+            <a class="fancy" href="https://github.com/Eatkin/codewars-scraper" target="_blank">Codewars Scraper Source
+                Code</a>
+            <a class="fancy" href="https://github.com/Eatkin/codewars-data-analysis" target="_blank">Exploratory Data
+                Analysis Source Code</a>
+            <a class="fancy" href="https://eatkin.github.io/codewars-data-analysis/#/" target="_blank">Analysis
+                Presentation</a>
+            <a class="fancy" href="https://github.com/Eatkin/codewars-solutions" target="_blank">Codewars Solutions
+                Repository</a>
 
             <h4>Project Overview</h4>
-            <h5>Project Objectives</h5>
-            <p>The primary goal of this project is to build a customised web scraper for retrieving <i>Codewars</i>
-                problem
-                solutions and create an interactive data visualisation notebook to accompany the problems.</p>
-            <h5>Data Collection</h5>
-            <p>Initially I built a static webscraper, requiring me to preload the page with the number of
-                problems I wanted to scrape and save it locally. <i>Codewars</i> loads solutions dynamically, so as I
-                solved
-                more problems, this became more cumbersome.</p>
-            <p>I later updated the scraper to use <i>Selenium</i> to login to <i>Codewars</i> using a headless browser
-                and
-                simulate scrolling to the bottom of the page. <i>Beautiful Soup</i> then parses all the problems, which
-                are
-                saved locally and organised into folders based on the problem's programming language.</p>
-
-            <figure>
-                <img src="assets/images/codewarsScraper.png" alt="Codewars scraper running in command line" />
-                <figcaption>The Codewars Scraper is a command line based Python program</figcaption>
-            </figure>
-
-            <h5>Data Visualisation</h5>
-            <p>Instead of just leaving these scraped problems to sit archived on my hard disk, I decided to
-                bring it to life by creating a <i>Jupyter Notebook</i> to visualise the data and explore interesting
-                features.
-            </p>
-            <p>By employing libraries such as <i>Matplotlib</i> and <i>Seaborn</i>, I'm able to visualise my problem
-                solving behaviour over time.</p>
+            <p><i><a href="https://www.codewars.com/about" target="_blank">Codewars</a></i> is a platform for coding
+                challenges, known as <i>katas</i>, where users can solve problems and
+                compare their solutions with other users.</p>
+            <p>I have been using coding problems on <i>Codewars</i> to further my technical capabilities since I started
+                learning Python and also use them as a way to explore new languages and paradigms.</p>
+            <p>As the amount of katas I solved grew, I wanted a way to archive my solutions, visualise my progress and
+                see how my problem solving skills have developed over time.</p>
 
             <figure>
                 <img src="assets/images/codewarsDifficultyChart.png"
@@ -62,50 +43,32 @@
                 </figcaption>
             </figure>
 
-            <p>For example, I can see how many problems I solved each day, how many problems I solved in
-                each language, and how many problems I solved in each difficulty.</p>
-            <p>I also use the <i>Codewars</i> API to collect additional information about problems, which allows me
-                to uncover novel insights such as the <i>'rarest kata'</i>, the <i>Codewars</i> problem I've solved that
-                has
-                the least
-                solved, or the <i>'most difficult kata'</i>; the <i>Codewars</i> problem that has the lowest rate of
-                completion.</p>
-
-            <h5>Impact and Future Steps</h5>
-            <p>This project forms the foundation for future explorations in coding challenges and data
-                analysis.
-            </p>
-            <p>The Jupyter Notebook can handle problems dynamically, meaning it is self-updating as I solve
-                more problems.</p>
-
-            <h4>Conclusion</h4>
-            <p>My Codewars Web Scraper and Data Visualisation project shows my passion for coding, data
-                exploration, and problem-solving.</p>
-            <p>The <i>Jupyter Notebook</i> is a great way to visualise the progress I've made and I look forward to
-                continuing to use it as I solve more problems.</p>
-
-            <h6>Further Development</h6>
-            <p>The <i>Codewars</i> scraper does not include any error trapping for if the user enters incorrect
-                login credentials or if the scraper is comes across an unexpected programming language, as
-                detailed below.</p>
-            <p>The <i>Codewars</i> scraper contains a Python dictionary which matches programming languages to file
-                extensions
-                and comment syntax. This only contains the programming languages I have used on <i>Codewars</i> and may
-                be
-                extended to contain details for all programming languages <i>Codewars</i> offers.</p>
-
-            <h6>Project Links</h6>
-            <ul>
-                <li><a href="https://github.com/Eatkin/codewars-scraper" target="_blank">Codewars
-                        Scraper
-                        Github Repository</a></li>
-                <li><a href="https://github.com/Eatkin/codewars-data-analysis" target="_blank">Codewars
-                        Analysis and Data Visualisation Github Repository</a></li>
-                <li><a href="https://eatkin.github.io/codewars-data-analysis/#/" target="_blank">Codewars
-                        Analysis and Data Visualisation Slides</a></li>
-                <li><a href="https://github.com/Eatkin/codewars-solutions" target="_blank">Codewars
-                        Solutions Github Repository</a></li>
+            <h4>Key Features</h4>
+            <ul class="bullet-points">
+                <li>Customised Selenium-based web scraper for retrieving and categorising <i>Codewars</i> problem
+                    solutions</li>
+                <li>Jupyter Notebook to parse solutions into a dataframe, collect further information through the
+                    Codewars API and conduct exploratory data anlysis</li>
+                <li>Presentation slides to visualise data and explore interesting features</li>
             </ul>
+
+            <figure>
+                <img src="assets/images/codewarsScraper.png" alt="Codewars scraper running in command line" />
+                <figcaption>The Codewars Scraper is a command line based Python program</figcaption>
+            </figure>
+
+            <h4>Technologies Used</h4>
+            <ul class="bullet-points">
+                <li>Python</li>
+                <li>Selenium</li>
+                <li>BeautifulSoup</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Jupyter Notebook</li>
+                <li>Codewars API</li>
+            </ul>
+
         </div>
     </div>
 </div>
