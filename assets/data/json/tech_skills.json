@@ -9,6 +9,10 @@
             "description": "Database query language for data manipulation."
         },
         {
+            "name": "Google Cloud Platform",
+            "description": "Cloud computing platform for hosting applications and databases."
+        },
+        {
             "name": "StatsModels",
             "description": "Statistical modeling and analysis library in Python."
         },
@@ -63,32 +67,28 @@
             "description": "Version control system for collaborative coding."
         },
         {
-            "name": "Visual Studio Code",
-            "description": "Code editor with powerful features and extensions."
+            "name": "Docker",
+            "description": "Containerisation platform for deploying applications."
         },
         {
             "name": "Bash/Z Shell",
             "description": "Command-line interface for scripting and automation."
         },
         {
-            "name": "Vim",
-            "description": "Text editor for efficient code editing."
-        },
-        {
-            "name": "6502 Assembly (Atari 2600)",
-            "description": "Low-level programming language for Atari 2600 games."
+            "name": "Visual Studio Code",
+            "description": "Code editor with powerful features and extensions."
         },
         {
             "name": "Make",
             "description": "Build automation tool for compiling code."
         },
         {
-            "name": "Docker",
-            "description": "Containerisation platform for deploying applications."
+            "name": "Vim",
+            "description": "Terminal text editor for efficient code editing."
         },
         {
-            "name": "Google Cloud Platform",
-            "description": "Cloud computing platform for hosting applications and databases."
+            "name": "6502 Assembly",
+            "description": "Low-level programming language for the MOS 6502 processor."
         }
     ]
 }
