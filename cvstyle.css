@@ -38,6 +38,19 @@ li {
     padding: 0;
 }
 
+/* Heading sizes */
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -51,6 +64,10 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-colour);
+}
+
+main>hr {
+    margin: 1.5em auto;
 }
 
 .experience {
@@ -161,12 +178,12 @@ footer {
 }
 
 #github-icon {
-    height: 22px;
+    height: 20px;
     margin-right: 5px;
 }
 
 #linkedin-icon {
-    height: 22px;
+    height: 20px;
     margin-right: 5px;
 }
 
@@ -194,7 +211,7 @@ footer {
 /* Ultra jank way of making the columns fit the same height */
 .flex-row div:nth-of-type(1) {
     font-size: 14px;
-    width: 45%;
+    width: 40%;
 }
 
 /* Add margin between h3 elements */
@@ -234,12 +251,6 @@ footer {
     cursor: pointer;
 }
 
-/* NOTES:
-This turns on print-friendly colours for the page when printing
-However I want to print to pdf for a downloadable version, so the print friendly colours need disabling for that specifically
-This includes re-enabling the box-shadow in the experience section (but not cv-container)
-*/
-
 @media print {
 
     /* Set the page width and height to that of a sheet of A4 paper */
@@ -247,16 +258,12 @@ This includes re-enabling the box-shadow in the experience section (but not cv-c
         size: A4;
     }
 
+    /* Remove the box shadow from the cv itself */
     .cv-container {
         box-shadow: none;
         margin: 0;
         padding-bottom: 0;
     }
-
-    .experience {
-        box-shadow: none;
-    }
-
 
     html {
         background-color: #FAF9F5;
