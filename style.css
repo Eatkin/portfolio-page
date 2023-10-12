@@ -327,11 +327,18 @@ h6 {
     transition: transform 0.2s;
     top: 0;
     display: inline-block;
+    text-decoration: none;
 }
 
 .fancy:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.bullet-points li {
+    margin-left: 1em;
+    margin-bottom: 0;
+    list-style: square;
 }
 
 #skills ul li {
