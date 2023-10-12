@@ -243,47 +243,19 @@ This includes re-enabling the box-shadow in the experience section (but not cv-c
     }
 
     .cv-container {
-        background-color: #fff;
         box-shadow: none;
         margin: 0;
         padding-bottom: 0;
     }
 
     .experience {
-        background: none;
         box-shadow: none;
     }
 
-    /* Set colours to print friendly colours (optional - remove for print to pdf) */
-    body {
-        color: #000;
-    }
 
-    .contact-info li,
-    .profile,
-    .emphasise {
-        color: #000;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: #000;
-    }
-
-    a {
-        color: #000;
-    }
-
-    /* If we DO want to print in colour (which I do for pdf export) this ensures the background colour fills the page 
-    NOTE: variables do not work in media queries and this must be manually updated which is annoying */
-    /*
     html {
         background-color: #FAF9F5;
-    }*/
+    }
 
     .download-link {
         display: none;
