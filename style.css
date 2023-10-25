@@ -31,6 +31,7 @@ h6 {
 /* Begin by setting the sizes for heading elements */
 h1 {
     font-size: 2.5em;
+    text-align: center;
 }
 
 h2 {
@@ -338,6 +339,36 @@ h6 {
     list-style: square;
 }
 
+#main-details {
+    margin-bottom: 2em;
+}
+
+#about-me-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#about-me-skills section {
+    width: 50%;
+}
+
+#about-me-skills section:first-child {
+    margin-right: 1em;
+}
+
+#about-me-skills section:last-child {
+    margin-left: 1em;
+}
+
+#about p {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.2em;
+}
+
 #skills ul li {
     position: relative;
     list-style: none;
@@ -424,7 +455,7 @@ h6 {
 
 #social-icons li img:hover {
     margin-top: -10px;
-    filter: drop-shadow(0 0 10px #ff6ac1)
+    filter: drop-shadow(0 0 4px #ff6ac1);
 }
 
 /* Responsive design */
@@ -476,5 +507,18 @@ h6 {
 
     .skill-wrapper {
         display: block;
+    }
+
+    /* Switch to column and set width to 100% */
+    #about-me-skills {
+        flex-direction: column;
+    }
+
+    #about-me-skills section {
+        width: 100%;
+    }
+
+    #about-me-skills section:last-child {
+        margin-left: 0;
     }
 }

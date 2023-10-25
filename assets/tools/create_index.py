@@ -1,5 +1,11 @@
 import os, json
 
+# Constants for the different types of projects
+project_keys = ['DATA PROJECTS', 'GAME PROJECTS', 'WEB PROJECTS', 'BLOGS', 'CERTIFICATIONS']
+project_json_keys = ['Data Science Projects', 'Game Development Projects', 'Web Development Projects', 'Blogs', 'Certifications']
+# Tuples for translation between the two
+project_keys_to_json_keys = tuple(zip(project_keys, project_json_keys))
+
 def get_tech_skills():
     with open('assets/data/json/tech_skills.json', 'r') as f:
         return json.load(f)
@@ -20,7 +26,10 @@ def construct_index_html(tech_skills_html, projects_html):
     
     # Add in the content
     html = html.replace('<!-- TECH_SKILLS -->', tech_skills_html)
-    html = html.replace('<!-- PROJECTS -->', projects_html)
+
+    # Projects section
+    for replacement, key in project_keys_to_json_keys:
+        html = html.replace(f'<!-- {replacement} -->', projects_html[key])
 
     # Add the about me section contained in about.html
     with open('assets/data/html/about.html', 'r') as f:
@@ -37,17 +46,18 @@ def get_projects_html(projects_json):
     """Returns the HTML for the projects section of the index page
     Why didn't I write my projects in markdown format?
     Because I didn't think of it at the time, and now it's too late"""
-    html = ''
+    # Create a dictionary of the different types of projects
+    projects_html = {}
     for project in projects_json:
-        html += f'<h2>{project}</h2>'
+        projects_html[project] = f'<h2>{project}</h2>'
         for p in projects_json[project]:
             try:
                 with open(p['html'], 'r') as f:
-                    html += f.read()
+                    projects_html[project] += f.read()
             except:
                 continue
                 
-    return html
+    return projects_html
 
 tech_skills = get_tech_skills()
 tech_skills_html = get_tech_skills_html(tech_skills)
