@@ -1,4 +1,3 @@
-Move contact details and buttons to the top of the page
-Add more menu items to the top of the page - blogs, certifications
-Project subsections
+Project subsections rename
 Project images should try fill 100% of the width of the screen even though that might break it lol
+Hover effects for anchor tags should use transition to do the text decoration, same as the menu uses

@@ -52,6 +52,12 @@ h3 a:hover {
 
 a {
     color: #fffb06;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #ff6ac1;
+    text-decoration: none;
 }
 
 /* These are headings that appear in the overlay so they are big */
@@ -337,6 +343,10 @@ h6 {
     margin-left: 1em;
     margin-bottom: 0.5em;
     list-style: square;
+}
+
+#email {
+    text-align: center;
 }
 
 #main-details {
