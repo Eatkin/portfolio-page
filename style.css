@@ -44,10 +44,22 @@ h3 {
 
 h3 a {
     text-decoration: none;
+    position: relative;
 }
 
-h3 a:hover {
-    text-decoration: underline;
+h3 a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #ff6ac1;
+    transition: height 0.3s ease, width 0.3s ease;
+}
+
+h3 a:hover::after {
+    width: 100%;
 }
 
 a {
@@ -100,6 +112,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -189,15 +202,12 @@ section {
 
 .project-image {
     position: relative;
-    display: inline-block;
+    display: flex;
     overflow: hidden;
     max-width: 100%;
     transition: max-width 0.3s ease;
 }
 
-.project-image {
-    max-width: 110%;
-}
 
 .project-overlay {
     position: absolute;
