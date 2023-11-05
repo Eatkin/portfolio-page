@@ -59,6 +59,10 @@
         {
             "name": "Design a CPU",
             "html": "assets/data/html/cpu.html"
+        },
+        {
+            "name": "Learn Assembly Language by Making Games for the Atari 2600",
+            "html": "assets/data/html/atari.html"
         }
     ]
 }
