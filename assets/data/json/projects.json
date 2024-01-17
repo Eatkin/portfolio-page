@@ -25,6 +25,10 @@
     ],
     "Web Development Projects": [
         {
+            "name": "David Social Command Line Interface",
+            "html": "assets/data/html/david.html"
+        },
+        {
             "name": "Personal Homepage",
             "html": "assets/data/html/homepage.html"
         },
